@@ -22,8 +22,8 @@ for row in matrix:
         l += 1
     print()
     s += 1
-print("Минимальное значение всего списка", c)
-print("Максимальное значение всего списка", d)
+# print("Минимальное значение всего списка", c)
+# print("Максимальное значение всего списка", d)
 print("Минимальное значение главной диагонали равно", e)
 
 print(low_line * 8)
@@ -39,3 +39,5 @@ for row in range(len(matrix)):
         for col in range(len(matrix[row])):
             print(matrix[row][col], end='\t\t')
     print()
+
+print("Начал разбираться")
