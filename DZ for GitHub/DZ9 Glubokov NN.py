@@ -1,1 +1,5 @@
 print('Задание по идее выполнено, но есть некоторые вопросы')
+print('Hello')
+print('Hello')
+print('Hello')
+print('Hello')
