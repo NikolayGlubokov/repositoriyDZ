@@ -77,7 +77,7 @@ from random import randint
 # w={randint(0, 10) for i in range(randint(1,3))}
 # e={randint(0, 10) for i in range(randint(1,3))}
 # r={randint(0, 10) for i in range(randint(1,3))}
-# t={randint(0, 10) for i in range(randint(1,3))}
+# t={andint(0, 10) for i in range(randint(1,3))}
 # y={randint(0, 10) for i in range(randint(1,3))}
 #
 # s=q|w|e|r|t|y
@@ -85,14 +85,38 @@ from random import randint
 # print(len(s))
 # print(min(list(s)))
 # print(max(list(s)))
-a = 'Hello'
-b = 'How are you'
+x = dict(a=1, b=2)
+y = dict(b=4, c=6)
+z=x.copy()
+z.update(y)
+b=x|y
+print(z)
+print(b)
+#     x1=['i3',9, 4500],
+#     x2=['i5', 3,10000],
+#     x3=[ 'i7', 6,2000],
+#     x4=[ 'amd',8,3500],
+#     x5=['pentium',5,8000]
+# )
+# for i in a:
+#     print(i, a[i],'\n')
+# c=input("Zamena")
+# d = int(input('kol-vo'))
+# for i in a:
+#     for j in i:
+#         if i==c:
+#             a[i][1]=d
+#
+#     print(a)
 
-
-def func(x, y):
-    s1=set(x)
-    s2=set(y)
-    return s1&s2
-
-
-print('Общие буквы: ', func(a, b))
+# s = 1
+# for i in a:
+#     s *= a[i]
+#
+# print(s)
+#
+# a= {i: input('Введите название овоща') for i in range(1, 5)}
+# print(a)
+# b=int(input("Какой элемент вы хотите удалить? "))
+# del a[b]
+# print(a)
