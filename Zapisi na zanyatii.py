@@ -1,6 +1,7 @@
 from random import randint
 
-# 
+
+#
 # def check_password(n, even=True):
 #     sum = 0
 #     while n > 0:
@@ -155,9 +156,58 @@ from random import randint
 #         a[p].append(i)
 # print(a)
 
-a = ['January', 'February', 'March']
-b = [52000, 51000, 48000]
-c = [46800, 45900, 43200]
-for prod, prib, m in zip(b,c,a):
-    print("obschaya pribil v", m, '=', prod-prib)
+# a = ['January', 'February', 'March']
+# b = [52000, 51000, 48000]
+# c = [46800, 45900, 43200]
+# for prod, prib, m in zip(b,c,a):
+#     print("obschaya pribil v", m, '=', prod-prib)
+
+
+# def funct(student,*a):
+#     print('Student name:', student)
+#     for i in range(len(a)):
+#         if i  < (len(a)-1):
+#             print(i, end=', ')
+#         if i == (len(a)-1):
+#             print(i, end=' ')
+#     print()
+#
+# def funct(student, *a):
+#     print(student, end=' ')
+#     print(*a, sep=', ')
+#     print()
+#
+#
+# funct('Igor', 2, 3, 4, 5, 6, 7, 8, 9)
+# funct('Nick', 3, 6, 1, 9, 5)
+
+# while (number > 0):
+#     remainder = number % 10
+#     revs_number = (revs_number * 10) + remainder
+#     number = number // 10
+# def revrs(n):
+#     s = str(n)
+#     return int(s[::-1])
+#
+#
+# def funct(*a, only_odd=False):
+#     res = []
+#     for i in a:
+#         if not only_odd or (only_odd and i % 2 == 0):
+#             res.append(revrs(i))
+#     return res
+#
+#
+# print(funct(235, 75464, 725435, 33, 78, 972))
+# print(funct(235, 75464, 725435, 33, 78, 972, only_odd=True))
+my_dict={'one':'first'}
+
+
+def db(**args):
+    my_dict.update(args.items())
+    return my_dict
+
+print(db(k56=52, two=33))
+print(db(g5=52, j6=33))
+
 
