@@ -200,14 +200,60 @@ from random import randint
 #
 # print(funct(235, 75464, 725435, 33, 78, 972))
 # print(funct(235, 75464, 725435, 33, 78, 972, only_odd=True))
-my_dict={'one':'first'}
+# my_dict={'one':'first'}
 
 
-def db(**args):
-    my_dict.update(args.items())
-    return my_dict
+# def db(**args):
+#     my_dict.update(args.items())
+#     return my_dict
+#
+# print(db(k56=52, two=33))
+# print(db(g5=52, j6=33))
 
-print(db(k56=52, two=33))
-print(db(g5=52, j6=33))
+from math import *
+from random import *
+
+
+def rhombus(**a):
+    s = (a[d1] * a[d]) / 2
+    return s
+
+
+def squared(**a):
+    b = list(a.values())
+    s = b[0] ** 2
+    return s
+
+
+def trapezoid(**a):
+    b = list(a.values())
+    s = ((b[0] + b[1]) * b[2]) / 2
+    return s
+
+
+def circle(**a):
+    b = list(a.values())
+    s = (b[0] ** 2) * pi
+    return s
+
+
+def funct(figure_type='unknown', **args):
+    if figure_type == 'rhombus':
+        print(rhombus(**args))
+    elif figure_type == 'squared':
+        print(squared(**args))
+    elif figure_type == 'trapezoid':
+        print(trapezoid(**args))
+    elif figure_type == 'circle':
+        print(circle(**args))
+    else:
+        print('Invalid data')
+
+
+funct(figure_type='rhombus', d1=10, d2=8)
+funct(figure_type='squared', a=5)
+funct(figure_type='trapezoid', a=12, b=3, h=6)
+funct(figure_type='circle', r=18)
+funct(figure_type='unknown', a=5, b=2, c=3)
 
 
