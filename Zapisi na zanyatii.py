@@ -1,6 +1,5 @@
 from random import randint
 
-
 #
 # def check_password(n, even=True):
 #     sum = 0
@@ -210,50 +209,78 @@ from random import randint
 # print(db(k56=52, two=33))
 # print(db(g5=52, j6=33))
 
-from math import *
-from random import *
+# from math import *
+# from random import *
+#
+#
+# def rhombus(**a):
+#     b = list(a.values())
+#     s = (b[0] * b[1]) / 2
+#     return s
+#
+#
+# def squared(**a):
+#     b = list(a.values())
+#     s = b[0] ** 2
+#     return s
+#
+#
+# def trapezoid(**a):
+#     b = list(a.values())
+#     s = ((b[0] + b[1]) * b[2]) / 2
+#     return s
+#
+#
+# def circle(**a):
+#     b = list(a.values())
+#     s = (b[0] ** 2) * pi
+#     return s
+#
+#
+# def funct(figure_type='unknown', **args):
+#     if figure_type == 'rhombus':
+#         print(rhombus(**args))
+#     elif figure_type == 'squared':
+#         print(squared(**args))
+#     elif figure_type == 'trapezoid':
+#         print(trapezoid(**args))
+#     elif figure_type == 'circle':
+#         print(circle(**args))
+#     else:
+#         print('Invalid data')
+#
+#
+# funct(figure_type='rhombus', d1=10, d2=8)
+# funct(figure_type='squared', a=5)
+# funct(figure_type='trapezoid', a=12, b=3, h=6)
+# funct(figure_type='circle', r=18)
+# funct(figure_type='unknown', a=5, b=2, c=3)
+#
+#
+# def outer(n):
+#     s = 0
+#
+#     def inner():
+#         nonlocal s
+#         s += 1
+#         return n, s
+#
+#     return inner
+#
+#
+# res = outer('Москва')
+# print(res())
+# print(res())
+# res2 = outer('Сочи')
+# print(res2())
+# print(res2())
+# print(res())
+# #
+# add5 = outer(5)
+# print(add5(10))
+# print(outer(5)(19))
 
+print((lambda x: (lambda y: (lambda z: x + y + z)))(4)(6)(10))
 
-def rhombus(**a):
-    s = (a[d1] * a[d]) / 2
-    return s
-
-
-def squared(**a):
-    b = list(a.values())
-    s = b[0] ** 2
-    return s
-
-
-def trapezoid(**a):
-    b = list(a.values())
-    s = ((b[0] + b[1]) * b[2]) / 2
-    return s
-
-
-def circle(**a):
-    b = list(a.values())
-    s = (b[0] ** 2) * pi
-    return s
-
-
-def funct(figure_type='unknown', **args):
-    if figure_type == 'rhombus':
-        print(rhombus(**args))
-    elif figure_type == 'squared':
-        print(squared(**args))
-    elif figure_type == 'trapezoid':
-        print(trapezoid(**args))
-    elif figure_type == 'circle':
-        print(circle(**args))
-    else:
-        print('Invalid data')
-
-
-funct(figure_type='rhombus', d1=10, d2=8)
-funct(figure_type='squared', a=5)
-funct(figure_type='trapezoid', a=12, b=3, h=6)
-funct(figure_type='circle', r=18)
-funct(figure_type='unknown', a=5, b=2, c=3)
-
-
+lst = [1,2,3,4,5]
+print(max(lst))
