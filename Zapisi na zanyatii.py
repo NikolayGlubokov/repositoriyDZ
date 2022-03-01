@@ -1,4 +1,6 @@
-from random import randint
+from math import *
+from random import *
+
 
 #
 # def check_password(n, even=True):
@@ -279,8 +281,66 @@ from random import randint
 # add5 = outer(5)
 # print(add5(10))
 # print(outer(5)(19))
+#
+# print((lambda x: (lambda y: (lambda z: x + y + z)))(4)(6)(10))
+#
+# lst = [1,2,3,4,5]
+# print(max(lst))
+# players = [{'name': 'Антон', 'last name': 'Бирюков', 'rating': 9},
+#            {'name': 'Алексей', 'last name': 'Бодня', 'rating': 10},
+#            {'name': 'Федор', 'last name': 'Сидоров', 'rating': 4},
+#            {'name': 'Михаил', 'last name': 'Семенов', 'rating': 6}]
+# d = {
+#     1: lambda x: print(pi * x ** 2),
+#     2: lambda x, y: print(x * y),
+#     3: lambda a, b, h: print((a + b) * h / 2)
+# }
+# d[1](12)
+# d[2](2, 5)
+# d[3](4, 7, 10)
+# print((lambda x, y, z: min(x, y, z))(6, 2, 18))
+# b = ['madam', 'adam', 'seves', 'retem', 'abbadon']
+# print(b)
+# print(list(filter(lambda x: x == x[::-1], b)))
+# def hello():
+#     return 'Hello, i am func "hello"'
+#
+#
+# def super_func(func):
+#     print('Hello, i am func super_func')
+#     print(func())
+#
+#
+# super_func(hello)
+#
+#
+# def hello2():
+#     return 'Hello, i am func "hello"'
+#
+#
+# test = hello2
+# print(test())
 
-print((lambda x: (lambda y: (lambda z: x + y + z)))(4)(6)(10))
+def my_decorator(func):  # dekoriruysaa funczia
+    i = 0
 
-lst = [1,2,3,4,5]
-print(max(lst))
+    def func_wrapper():
+        nonlocal i
+        i += 1
+        func()
+        print('вызов функции:', i)
+
+    return func_wrapper
+
+
+@my_decorator  # decorator
+def func_test():  # dekoriruemaya func
+    print('Hello')
+
+
+func_test()
+func_test()
+func_test()
+#
+# test=my_decorator(func_test)
+# test()

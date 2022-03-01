@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.DZ16 Glubokov NN">
+  <component name="RunManager" selected="Python.Zapisi na zanyatii">
     <configuration name="DZ13 Glubokov NN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DZ16 Glubokov NN" />
         <item itemvalue="Python.Zapisi na zanyatii" />
+        <item itemvalue="Python.DZ16 Glubokov NN" />
         <item itemvalue="Python.DZ15 Glubokov NN" />
         <item itemvalue="Python.DZ14 Glubokov NN" />
         <item itemvalue="Python.DZ13 Glubokov NN" />
