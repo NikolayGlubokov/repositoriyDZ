@@ -321,26 +321,118 @@ from random import *
 # test = hello2
 # print(test())
 
-def my_decorator(func):  # dekoriruysaa funczia
-    i = 0
-
-    def func_wrapper():
-        nonlocal i
-        i += 1
-        func()
-        print('вызов функции:', i)
-
-    return func_wrapper
-
-
-@my_decorator  # decorator
-def func_test():  # dekoriruemaya func
-    print('Hello')
-
-
-func_test()
-func_test()
-func_test()
+# def my_decorator(func):  # dekoriruysaa funczia
+#     i = 0
 #
-# test=my_decorator(func_test)
-# test()
+#     def func_wrapper():
+# #         nonlocal i
+# #         i += 1
+# #         func()
+# #         print('вызов функции:', i)
+# #
+# #     return func_wrapper
+# #
+# #
+# # @my_decorator  # decorator
+# # def func_test():  # dekoriruemaya func
+# #     print('Hello')
+# #
+# #
+# # func_test()
+# # func_test()
+# # func_test()
+# # #
+# # # test=my_decorator(func_test)
+# # # test()
+# def func1(x):
+#     def func2(y):
+#         s = x * y
+#         return s
+#
+#     return func2
+#
+#
+# res = func1(3)
+# print(res(20))
+# print(res(15))
+# res = func1(10)
+# print(res(15))
+# print(res(15))
+#  def typed(*args, **kwargs):
+#     print(args)
+#     print(kwargs)
+#
+#     def wrapper(fn):
+#         def wrap(*f_args, **f_kwargs):
+#             for i in range(len(args)):
+#                 if type(f_args[i]) != args[i]:
+#                     raise TypeError("Некорректный тип данных")
+#             for k in kwargs:
+#                 if type(f_kwargs[k]) != kwargs[k]:
+#                     raise TypeError("Некорректный тип данных")
+#             return fn(*f_args, **f_kwargs)
+#
+#         return wrap
+#
+#     return wrapper
+#
+#
+# #
+# # @typed(int, int, int)
+# # def typed_fn(x, y, z):
+# #     return x * y * z
+# #
+# #
+# # @typed(str, str, str)
+# # def typed_fn2(x, y, z):
+# #     return x + y + z
+#
+#
+# @typed(str, str, z=int)
+# def typed_fn3(x, y, z="Hello! "):
+#     return (x + y) * z
+#
+#
+# # print(typed_fn(3, 4, 5))
+# # # print(typed_fn(3, 4, "Hello"))
+# # print(typed_fn2("Hello, ", "world", "!"))
+# # print(typed_fn2("Hello, ", "world", 2))
+# print(typed_fn3("Hello, ", "world!  ", z=5))
+# 
+# def decor(tx=None, dec_text=""):
+#     def wrapper(func):
+#         def wrap(*args):
+#             print(dec_text, end="")
+#             func(*args)
+# 
+#         return wrap
+# 
+#     if tx is None:
+#         return wrapper
+#     else:
+#         return wrapper(tx)
+# 
+# 
+# @decor
+# def hello_world2(text):
+#     print(text)
+# 
+# 
+# hello_world2("Hi!")
+# 
+# 
+# @decor(dec_text="Hello, ")
+# def hello_world(text):
+#     print(text)
+
+
+# hello_world("world!")
+str1=' Я изучаю Nuthon. Мне нравится Nuthon. Nuthon мой любимый язык программирования'
+lst=''
+for i in range(len(str1)):
+    if 'N' == str1[i]:
+        lst+='P'
+    else:
+        lst+=str1[i]
+
+print(lst)
