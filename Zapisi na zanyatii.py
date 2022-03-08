@@ -1,7 +1,6 @@
 from math import *
 from random import *
 
-
 #
 # def check_password(n, even=True):
 #     sum = 0
@@ -426,13 +425,130 @@ from random import *
 #     print(text)
 
 
-# hello_world("world!")
-str1=' Я изучаю Nuthon. Мне нравится Nuthon. Nuthon мой любимый язык программирования'
-lst=''
-for i in range(len(str1)):
-    if 'N' == str1[i]:
-        lst+='P'
-    else:
-        lst+=str1[i]
+# # hello_world("world!")
+# str1=' Я изучаю Nuthon. Мне нравится Nuthon. Nuthon мой любимый язык программирования'
+# lst=''
+# for i in range(len(str1)):
+#     if 'N' == str1[i]:
+#         lst+='P'
+#     else:
+#         lst+=str1[i]
+#
+# print(lst)
 
-print(lst)
+# s='Test string for me'
+# s2=[]
+# for i in s:
+#     s2.append(ord(i))
+# print(s2)
+# s2=[int(sum(s2)/len(s2))]+s2
+# print(s2)
+# s2+=[x for x in [ord(x) for x in (input('->'+' '[:3]))] if x not in s2]
+# print(s2)
+# if s2[-1] in s2[:-1]:
+#     print(s2.count(s2[-1])-1)
+
+# a = 97
+# b = 122
+# for x in range(a, b + 1):
+#     print(chr(x), end=' ')
+# STEST = 7
+# LONGST = 10
+# mingAske = 33
+# maxAske = 122
+#
+#
+# def random_password():
+#     random_length = randint(STEST, LONGST)
+#     res=''
+#     for i in range(random_length):
+#         random_char=chr(randint(mingAske,maxAske))
+#         res+=random_char
+#     return res
+#
+# print(random_password())
+# print(random_password())
+# print(random_password())
+# print(random_password())
+
+
+# s = 'hello, WORLD! I am learning Python'
+# d = list(s)
+# print(s[:5])
+# print(s)
+# print(s.capitalize())
+# print(s.lower())
+# print(s.upper())
+# print(s.swapcase())
+# print(s.title())
+# print(s.count('o'))
+# print(s.find('lo'))
+# print(list(s))
+# print(str(d))
+
+# s = 'odin dwa'
+# s2 = s[s.find(' '):] + ' ' + s[:s.find(' ')]
+# print(s2)
+# s='sdfsdfge332gg3'
+# digits=[]
+# for x in s:
+#     if '0123456789'.find(x)!=-1:
+#         digits.append(x)
+#     else:
+#         pass
+# # print(digits)
+# print(dir(str))
+# s='123125425234'
+# print(s.index('3'))
+
+
+# def func(e):
+#     r = e.count(' е') + e.count('Е')
+#     print(r)
+#
+#
+# func(c)
+
+# c = 'Ежевику для ежат принесли два ежа. Ежевику еле-еле ежата возле ели съели'
+# g = '11 23 44 55 23 22'
+# h = '23'
+# b = ''
+# print(g.index('23'))
+# print(len(h))
+# print(g.find(h))
+# while len(g) != 0:
+#     if g.find(h) != -1:
+#         b = b + g[:g.index(h)]
+#         g = g[g.index(h) + len(h):]
+#     else:
+#         b += g
+#         g = ''
+#
+# print(b)
+
+
+c = '''примерная строка для 
+формирования в 
+список по 
+начальным 
+символам'''
+x = 'c'
+d = []
+while True:
+    if c.find(' ')!=-1:
+        d.append(c[:c.find(' ')])
+        c=c[c.find(' ')+1:]
+    else:
+        d.append(c)
+        break
+
+print(d)
+c=0
+for i in range(len(d)):
+    if '\n' in d[i]:
+        print(d[i])
+for i in range(len(d)):
+    if (d[i][0]=='с' or d[i][0]=='С') and len(d[i])>2:
+        c+=1
+
+print(c)
