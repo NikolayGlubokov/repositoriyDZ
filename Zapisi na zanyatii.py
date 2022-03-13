@@ -1,5 +1,6 @@
 from math import *
 from random import *
+import re
 
 #
 # def check_password(n, even=True):
@@ -525,30 +526,117 @@ from random import *
 #         g = ''
 #
 # print(b)
+#
+#
+# c = '''примерная строка для
+# формирования в
+# список по
+# начальным
+# символам'''
+# x = 'c'
+# d = []
+# while True:
+#     if c.find(' ')!=-1:
+#         d.append(c[:c.find(' ')])
+#         c=c[c.find(' ')+1:]
+#     else:
+#         d.append(c)
+#         break
+#
+# print(d)
+# c=0
+# for i in range(len(d)):
+#     if '\n' in d[i]:
+#         print(d[i])
+# for i in range(len(d)):
+#     if (d[i][0]=='с' or d[i][0]=='С') and len(d[i])>2:
+#         c+=1
+#
+# print(c)
 
+# c = 'I am learning Python. hello, World!'
+# c = c[:c.find('h')] + c[c.rfind('h') + 1:]
+# print(c)
+# print('abc123'.isalnum())
+# print('abc$123'.isalnum())
+# print(' '.isalnum())
+# print('abcABC'.isalpha())
+# print('abc5ABC'.isalpha())
+# print('12345'.isdigit())
+# print('abc5ABC'.isdigit())
+# print('abc'.isidentifier())
+# print('1abc'.isidentifier())
+# print('abc'.isidentifier())
+# print('abc'.islower())
+# print('Abc'.islower())
+# print('ab$c'.islower())
+# print('\t\n'.isspace())
+# print('The Apple'.istitle())
+# print('ABC'.isupper())
 
-c = '''примерная строка для 
-формирования в 
-список по 
-начальным 
-символам'''
-x = 'c'
-d = []
-while True:
-    if c.find(' ')!=-1:
-        d.append(c[:c.find(' ')])
-        c=c[c.find(' ')+1:]
-    else:
-        d.append(c)
-        break
+# print('py'.center(10,'-'))
+# print('py'.center(9,'-'))
+# print('py'.center(2,'-'))
+# print('py     '.rstrip())
+# print('py     ')
+# print('     py'.lstrip())
+# print('        py     ')
+# print('https://www.python.org'.lstrip('/:pths'))
+# print('py.$$$:'.rstrip(':$.'))
 
-print(d)
-c=0
-for i in range(len(d)):
-    if '\n' in d[i]:
-        print(d[i])
-for i in range(len(d)):
-    if (d[i][0]=='с' or d[i][0]=='С') and len(d[i])>2:
-        c+=1
+print('https://www.python.org'.lstrip('/:pths').rstrip('org.'))
+#
+#
+# print('     py    '.strip())
+# print('www.python.org/'.strip('/org.w'))
 
-print(c)
+# s = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования."
+#
+# print(s.replace('Nython','Python',2))
+
+# s='-'
+# seq=('a','b','c')
+# print(s.join(seq))
+# print('__'.join(['1','2']))
+# print(':'.join('Hello'))
+#
+# print('Строка разделенная пробелами'.split())
+# print('www.python.org'.split('.'))
+# print('www.python.org'.split('.',1))
+# a = input('Введите ФИО')
+# a = a.split()
+# # print(a[0],a[1][0]+'.'+ a[2][0]+'.')
+# print('www.python.org'.split('.'))
+# print('www.python.org'.rsplit('.',1))
+# # print('*'.join((input('->').split())))!!!!!!
+#
+#
+s = 'о Я ищу совпадения в 2021 году. И я их обязательно найду'
+reg = r'о'
+print(s)
+print(re.findall(reg, s))# spisok vseh sovpadeniy
+print(re.findall('12', s))
+# print(re.search(reg, s))#pervoe sovpadenie
+# print(re.search(reg, s).span())
+print(re.search(reg, s).start())
+print(re.search(reg, s).end())
+# print(re.search(reg, s).group())
+print(re.match(reg,s)) #poisk s nachala
+
+# print(re.split(reg, s, 1))
+# print(re.sub(reg, '!', s)) #zamena na novoe znachenie
+# s = 'Я ищу совпадения в 2021 году. 1987 И я их обязательно найду. Найду в два счёта'
+# # reg = r'[12][0-9][0-9][0-9]'
+# reg = r'[А-ЯЁа-яё.]'
+# print(re.findall(reg, s))
+# s = 'Еда, беду, победа'
+# reg = '[Ее]д[ау]'
+# print(re.findall(reg, s))
+# s = 'Я ищу совпадения в 2021 году. 1987 И я их обязательно найду. Найду в два счёта'
+# reg = r'[0-2]'
+# print(re.findall(reg, s))
+
+# s = "Час в 24-часовом формате от 00 до 23. 2021-06-15T21:45. Минуты, в диапазоне от 00 до 59. 2021-06-15T01:09"
+# reg=r'[0-2][0-3]:[0-5][0-9]'
+# print(re.findall(reg, s))
+print('https://github.com/Helen-prog/Python112/blob/master/112.py     https://disk.yandex.ru/d/rYQJzQvVllTQtw/17')
