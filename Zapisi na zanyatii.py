@@ -584,9 +584,9 @@ import re
 # print('https://www.python.org'.lstrip('/:pths'))
 # print('py.$$$:'.rstrip(':$.'))
 
-print('https://www.python.org'.lstrip('/:pths').rstrip('org.'))
-#
-#
+# print('https://www.python.org'.lstrip('/:pths').rstrip('org.'))
+# #
+# #
 # print('     py    '.strip())
 # print('www.python.org/'.strip('/org.w'))
 
@@ -611,17 +611,17 @@ print('https://www.python.org'.lstrip('/:pths').rstrip('org.'))
 # # print('*'.join((input('->').split())))!!!!!!
 #
 #
-s = 'о Я ищу совпадения в 2021 году. И я их обязательно найду'
-reg = r'о'
-print(s)
-print(re.findall(reg, s))# spisok vseh sovpadeniy
-print(re.findall('12', s))
-# print(re.search(reg, s))#pervoe sovpadenie
-# print(re.search(reg, s).span())
-print(re.search(reg, s).start())
-print(re.search(reg, s).end())
-# print(re.search(reg, s).group())
-print(re.match(reg,s)) #poisk s nachala
+# s = ' Я ищу совпадения в 2021 году. И я их обязательно найду'
+# reg = r'20*'
+# print(s)
+# print(re.findall(reg, s))  # spisok vseh sovpadeniy
+# print(re.findall('12', s))
+# # print(re.search(reg, s))#pervoe sovpadenie
+# # print(re.search(reg, s).span())
+# print(re.search(reg, s).start())
+# print(re.search(reg, s).end())
+# # print(re.search(reg, s).group())
+# print(re.match(reg,s)) #poisk s nachala
 
 # print(re.split(reg, s, 1))
 # print(re.sub(reg, '!', s)) #zamena na novoe znachenie
@@ -638,5 +638,93 @@ print(re.match(reg,s)) #poisk s nachala
 
 # s = "Час в 24-часовом формате от 00 до 23. 2021-06-15T21:45. Минуты, в диапазоне от 00 до 59. 2021-06-15T01:09"
 # reg=r'[0-2][0-3]:[0-5][0-9]'
+# # print(re.findall(reg, s))
+# print('https://github.com/Helen-prog/Python112/blob/master/112.py     https://disk.yandex.ru/d/rYQJzQvVllTQtw/17')
+# d = 'Цифры: 7, +17,-42, 0013, 0.3'
+# print(re.findall(r'[+-]?[\d.]+',d))
+
+# s='05-03-1987 # дата рождения'
+#
+# print('Дата рождения:', re.sub(r'-', '.', re.sub(r'#.*', '', s)))
+
+# st = 'autor=Пушкин А.С.; title = Евгений Онегин; price =200; year= 1831'
+# reg = r'\w+\s*=\s*[^;]*'
+# print(re.findall(reg, st))
+# print(st.split(';'))
+# s1 = 'МИ Д - Министерство иностранных дел, ГЭС - гидроэлектростанция, ФСБ - федеральная служба безопасности'
+# reg1 = r'[А-ЯЁ]{2,}\s*[А-ЯЁ]*'
+# print(re.findall(reg1, s1))
+# s='+7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 74994564578'
+# reg=r'\+?7[0-9]{10}'
+# print(re.findall(reg,s))
+# s = 'Я ищу совпадения в 2021 году. 1987 И я их обязательно найду. Найду в два счёта'
+# #reg = r'^\w+\s\w+'
+# reg = r'\w+\s\w+$'
 # print(re.findall(reg, s))
-print('https://github.com/Helen-prog/Python112/blob/master/112.py     https://disk.yandex.ru/d/rYQJzQvVllTQtw/17')
+#
+# print(re.findall(r'\w+','12 + й'))
+# print(re.findall(r'\w+','12 + q', flags=re.ASCII))
+
+# s='hello world'
+# print(re.findall(r'\w\+',s,flags=re.DEBUG))
+
+
+# s = 'Я ищу совпадения в 2021 году. 1987 И я их обязательно найду. Найду в два счёта'
+# reg = r'я'
+# print(re.findall(reg, s,flags=re.IGNORECASE))
+# text = """
+# {
+# "one":1,
+# "two":2,
+# "three":3
+# }
+# """
+# print(re.findall(r'one.\w+', text,flags=re.DOTALL))
+# print(re.findall(r'one$', text,flags=re.MULTILINE))
+# print(re.findall(r'^["\w+]+', text))
+# print(re.findall(r'^["\w+]+', text, flags=re.MULTILINE))
+# print(re.findall("""
+# [a-z_.-]+# part1
+# @
+# [a-z_.-]+#part2
+# """,'tes_t@mail.ru',flags=re.VERBOSE))
+#
+# text = """Python,
+# python
+# PYTHON"""
+# reg = "(?im)^python"
+# print(re.findall(reg, text))
+
+
+# def validate_name(name):
+#     return re.findall(r'^[a-z0-9_-]{3,16}$', name, flags=re.IGNORECASE)
+#
+#
+# print(validate_name('Python_master'))
+# print(validate_name('Py'))
+# print(validate_name('@Python_master#$%#$%#$%'))
+#
+# text2='123456@i.ru, 123_456@ru.name.ru, login@i.ru, логин-1@i.ru, login.3-67@i.ru 1login@ru.name.ru'
+# reg=r'[\w.-]+@[\w.-]+[\w]{2,3}'
+# print(re.findall(reg,text2))
+
+# text3='<body> Пример жадного соответствия регулярных выражений</body>'
+# print(re.findall('<.*?>',text3))
+#
+# text3='<body> Пример жадного соответствия регулярных выражений</body>'
+# print(re.search('<.*?>',text3).group())
+
+# text = "Python (в русском языке распространено название пито́н[16] или пайтон[17]) — высокоуровневый язык " \
+#        "программирования общего назначения с динамической типизацией и автоматическим управление памятью[18][19]."
+# reg = r'\[.*?]'
+# print(re.findall(reg,text,flags=re.MULTILINE))
+
+# s = 'Пётр, Ольга и Виталий отлично учатся!'
+# reg = r"Пётр|Ольга|Виталий"
+# print(re.findall(reg, s))
+
+s='int=4,float=4.0, double=8.0f'
+#reg=r'\w+\s*=\s*\d[.\w+]*'
+# #reg=r'(int|float)\s*=\s*\d[.\w+]*'
+# reg=r'((int|float)\s*=\s*\d[.\w+]*)'
+print(re.findall(reg,s))
