@@ -723,8 +723,119 @@ import re
 # reg = r"Пётр|Ольга|Виталий"
 # print(re.findall(reg, s))
 
-s='int=4,float=4.0, double=8.0f'
-#reg=r'\w+\s*=\s*\d[.\w+]*'
-# #reg=r'(int|float)\s*=\s*\d[.\w+]*'
-# reg=r'((int|float)\s*=\s*\d[.\w+]*)'
-print(re.findall(reg,s))
+# s='int=4,float=4.0, double=8.0f'
+# #reg=r'\w+\s*=\s*\d[.\w+]*'
+# # #reg=r'(int|float)\s*=\s*\d[.\w+]*'
+# # reg=r'((int|float)\s*=\s*\d[.\w+]*)'
+# print(re.findall(reg,s))
+
+# s='World2016, PS6, AI5'
+# reg=r'([a-z]+)(\d*)'
+# reg1=r'([a-z]+\d*)'
+# print(re.findall(reg,s, re.I))
+# print(re.findall(reg1,s, re.I))
+# s = '127.0.0.1'
+# reg = r'(?:\d{1,3}.){3}(?:\d{1,3})'
+# print(re.findall(reg, s, re.I))
+# s = '28-08-2021'
+# reg=r'([0][1-9]|[0-2][0-9]|[0-3][0-1])-([0-1][0-2]|[0][1-9])-(19[0-9][0-9]|20[0-2][0-2])'
+# reg1=r'\s'
+# print(re.findall(reg,s))
+# print(re.split(reg1,s))
+# s = 'Я ищу совпадения в 2021 году. 1987 И я их обязательно найду. Найду в два счёта'
+# reg = r'([0-9]+)\s(\D+)'
+# print(re.findall(reg, s))
+# print(re.search(reg, s).group())
+# m=re.search(reg,s)
+# print('Найдена строка: ', m[0])
+# print('Найдена строка: ', m[1])
+# print('Найдена строка: ', m[2])
+#
+# text = """
+# Самара
+# Москва
+# Тверь
+# Уфа
+# Казань
+# """
+#
+# count = 0
+#
+#
+# def repl_find(m):
+#     global count
+#     count += 1
+#     return f"<option value='{count}'>{m.group(1)}</option>"
+#
+#
+# print(re.sub(r'\s*(\w+)\s*', repl_find, text))
+#
+# s='<p> Изображение <img src="bg.jpg"> - фон страницы </p>'
+#
+# reg=r'<img\s+[^>]*src=([\'"])(.+)\1>'
+# print(re.findall(reg, s))
+#
+# reg2=r'<img\s+[^>]*src=(?P<q>[\'"])(.+)\(?P=q)>'
+# print(re.findall(reg2, s))
+#
+# # s = 'Самолёт прилетает 10/23/20221. Будем рады вас видеть после 10/24/2021'
+# # reg = r'(\d{2})/(\d{2})/(\d{4})'
+# # print(re.sub(reg, r":\2.\1.\3", s))
+# s='google.com and google.ru'
+# reg=r'(([a-z0-9-]{2,}\.)+[a-z]{2,4})'
+# print(re.sub(reg, r'http://\1', s))
+
+
+# def elevator(n):
+#     if n==0:
+#         print('Подвал')
+#         return
+#     print('=>', n)
+#     elevator(n - 1)
+#     print(n, end=' ')
+#
+#
+# n1 = int(input('На каком вы этаже:'))
+# elevator(n1)
+# def sum_list(lst):
+#     if len(lst)==1:
+#         return lst[0]
+#     else:
+#         return lst[0]+sum_list(lst[1:])
+#
+#
+# print(sum_list([1, 3, 5, 7, 9]))
+
+# def to_str(n, base):
+#     convert = '0123456789ABCDEF'
+#     if n < base:
+#         return convert[n]
+#     else:
+#         return to_str(n // base, base) + convert[n % base]
+#
+#
+# print(to_str(251,2))
+
+
+names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
+# print(names[0])
+# print(type(names[0])==list)
+# print(isinstance(names[0], list))
+# print(names[1])
+# print(isinstance(names[1], list))
+# print(names[1][1])
+# print(isinstance(names[1][1], list))
+# print(names[1][1][1])
+# print(isinstance(names[1][1][1], list))
+
+# def count_items(lst):
+#     count=0
+#     for item in lst:
+#         if isinstance(item, list):
+#             count+=count_items(item)
+#         else:
+#             count+=1
+#     return count
+#
+#
+# print(count_items(names))
