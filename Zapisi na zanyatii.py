@@ -1,6 +1,7 @@
 from math import *
 from random import *
 import re
+import time
 
 #
 # def check_password(n, even=True):
@@ -818,6 +819,8 @@ import re
 
 
 names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
+
+
 # print(names[0])
 # print(type(names[0])==list)
 # print(isinstance(names[0], list))
@@ -839,3 +842,194 @@ names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill
 #
 #
 # print(count_items(names))
+#
+#
+# def union(s):
+#     if not s:  # s==[]
+#         return s
+#     if isinstance(s[0], list):
+#         return union(s[0]) + union(s[1:])
+#     return s[:1] + union(s[1:])
+#
+#
+# print('Выпрямленный список: ', union(names))
+
+#
+# def remove(s):
+#     if not s:
+#         return ''
+#     if s[0] == '\t' or s[0] == ' ':
+#         return remove(s[1:])
+#     else:
+#         return s[0] + remove(s[1:])
+#
+#
+# print(remove('  Hel   lo\t Worl d '))
+
+
+# def seq_search(s, item):
+#     pos = 0
+#     found = False
+#     while pos < len(s) and not found:
+#         if s[pos] == item:
+#             found = True
+#         else:
+#             pos += 1
+#     return found
+#
+#
+# lst = [1, 2, 434, 4562, 23, 52, 22]
+# print(seq_search(lst, 3))
+# print(seq_search(lst, 23))
+#
+# def seq_search(s, item):
+#     pos = 0
+#     found = False
+#     stop=False
+#     while pos < len(s) and not found and not stop:
+#         if s[pos] == item:
+#             found = True
+#         else:
+#             if s[pos]>item:
+#                 stop=True
+#             else:
+#                 pos += 1
+#     return found
+#
+#
+# lst = [1, 2, 22, 23, 52, 434, 4562]
+#
+#
+# # print(seq_search(lst, 3))
+# # print(seq_search(lst, 23))
+#
+#
+# def binari_search(s, item):
+#     first = 0
+#     last = len(s) - 1
+#     found = False
+#
+#     while first <= last and not found:
+#         midlpoint = (first + last) // 2  # 4
+#         if s[midlpoint] == item:  # 13==3
+#             last = midlpoint - 1
+#             found = True
+#         else:
+#             if item < s[midlpoint]:
+#                 last = midlpoint - 1
+#             else:
+#                 first = midlpoint + 1
+#
+#     return found
+#
+#
+# print(binari_search(lst, 3))
+# print(binari_search(lst, 23))
+
+# lst1=sorted([randint(1,99) for i in range(10)])
+# ch=int(input('Введите искомое число: '))
+# print(lst1)
+# def binari_search(s, item):
+#     first = 0
+#     last = len(s) - 1
+#     found = False
+#
+#     while first <= last and not found:
+#         midlpoint = (first + last) // 2  # 4
+#         if s[midlpoint] == item:  # 13==3
+#             last = midlpoint - 1
+#             found = True
+#         else:
+#             if item < s[midlpoint]:
+#                 last = midlpoint - 1
+#             else:
+#                 first = midlpoint + 1
+#     if found:
+#         print('Число', item,' присутствует в списке')
+#     else:
+#         print('Число', item, 'отсутствует в списке')
+#
+#
+# binari_search(lst1, ch)
+
+#
+# def bubble(array):
+#     for i in range(len(array) - 1):
+#         for j in range(len(array) - i - 1):
+#             if array[j] > array[j + 1]:
+#                 array[j], array[j + 1] = array[j + 1], array[j]
+#
+#
+#
+# a = [randint(1, 99) for i in range(10)]
+# print(a)
+# start=time.monotonic()
+# bubble(a)
+# print(a)
+# res=time.monotonic()-start
+# print(round(res,3), 'sec')
+
+
+# def sort2_func(*args):
+#     s=+args
+#     ch=int(input('Выберите тип сортировки: 1-по убыванию, 2- по возрастанию'))
+# def merge_sort(a):
+#     n = len(a)
+#     if n < 2:
+#         return a
+#
+#     l = merge_sort(a[:n // 2])
+#     r = merge_sort(a[n // 2:n])
+#     i = j = 0
+#     res = []
+#     while i < len(l) or j < len(r):
+#         if not i < len(l):
+#             res.append(r[j])
+#             j += 1
+#         elif not j < len(r):
+#             res.append(l[i])
+#             i += 1
+#         elif l[i] < r[j]:
+#             res.append(l[i])
+#             i += 1
+#         else:
+#             res.append(r[j])
+#             j += 1
+#
+#     return res
+#
+#
+# array = [randint(1, 99) for i in range(1000)]
+# #print(array)
+# start=time.monotonic()
+# array = merge_sort(array)
+# #print(array)
+#
+# res=time.monotonic()-start
+# print(round(res,3), 'sec')
+def shell_sort(s):
+    gap = len(s)
+
+    while gap > 0:
+        for val in range(gap, len(s)):
+            cur_val = s[val]
+            pos = val
+
+            while pos >= gap and s[pos - gap] > cur_val:
+                s[pos] = s[pos - gap]
+                pos -= gap
+                s[pos] = cur_val
+
+        gap //= 2
+        print(gap, 'Spisok:', s)
+
+    return s
+
+
+a = [10, 44, 26, 14, 67, 21, 9, 87]
+print(a)
+start = time.monotonic()
+shell_sort(a)
+print(a)
+res = time.monotonic() - start
+print(round(res, 3), 'sec')
