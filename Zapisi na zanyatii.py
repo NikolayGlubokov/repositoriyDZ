@@ -973,63 +973,63 @@ names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill
 # def sort2_func(*args):
 #     s=+args
 #     ch=int(input('Выберите тип сортировки: 1-по убыванию, 2- по возрастанию'))
-# def merge_sort(a):
-#     n = len(a)
-#     if n < 2:
-#         return a
-#
-#     l = merge_sort(a[:n // 2])
-#     r = merge_sort(a[n // 2:n])
-#     i = j = 0
-#     res = []
-#     while i < len(l) or j < len(r):
-#         if not i < len(l):
-#             res.append(r[j])
-#             j += 1
-#         elif not j < len(r):
-#             res.append(l[i])
-#             i += 1
-#         elif l[i] < r[j]:
-#             res.append(l[i])
-#             i += 1
-#         else:
-#             res.append(r[j])
-#             j += 1
-#
-#     return res
-#
-#
-# array = [randint(1, 99) for i in range(1000)]
-# #print(array)
-# start=time.monotonic()
-# array = merge_sort(array)
-# #print(array)
+def merge_sort(a):
+    n = len(a)
+    if n < 2:
+        return a
+
+    l = merge_sort(a[:n // 2])
+    r = merge_sort(a[n // 2:n])
+    i = j = 0
+    res = []
+    while i < len(l) or j < len(r):
+        if not i < len(l):
+            res.append(r[j])
+            j += 1
+        elif not j < len(r):
+            res.append(l[i])
+            i += 1
+        elif l[i] > r[j]:
+            res.append(l[i])
+            i += 1
+        else:
+            res.append(r[j])
+            j += 1
+
+    return res
+
+
+array = [randint(1, 99) for i in range(20)]
+print(array)
+start=time.monotonic()
+array = merge_sort(array)
+print(array)
 #
 # res=time.monotonic()-start
 # print(round(res,3), 'sec')
-def shell_sort(s):
-    gap = len(s)
-
-    while gap > 0:
-        for val in range(gap, len(s)):
-            cur_val = s[val]
-            pos = val
-
-            while pos >= gap and s[pos - gap] > cur_val:
-                s[pos] = s[pos - gap]
-                pos -= gap
-                s[pos] = cur_val
-
-        gap //= 2
-        print(gap, 'Spisok:', s)
-
-    return s
-
-
-a = [10, 44, 26, 14, 67, 21, 9, 87]
-print(a)
-start = time.monotonic()
-shell_sort(a)
-print(a)
-res = time.monotonic() - start
-print(round(res, 3), 'sec')
+# def shell_sort(s):
+#     gap = len(s)
+#
+#     while gap > 0:
+#         for val in range(gap, len(s)):
+#             cur_val = s[val]
+#             pos = val
+#
+#             while pos >= gap and s[pos - gap] > cur_val:
+#                 s[pos] = s[pos - gap]
+#                 pos -= gap
+#                 s[pos] = cur_val
+#
+#         gap //= 2
+#         print(gap, 'Spisok:', s)
+#
+#     return s
+#
+#
+# a = [10, 44, 26, 14, 67, 21, 9, 87]
+# print(a)
+# start = time.monotonic()
+# shell_sort(a)
+# print(a)
+# res = time.monotonic() - start
+# print(round(res, 3), 'sec')
