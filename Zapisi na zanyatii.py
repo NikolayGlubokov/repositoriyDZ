@@ -818,7 +818,7 @@ import time
 # print(to_str(251,2))
 
 
-names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
+# names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
 
 
 # print(names[0])
@@ -956,55 +956,55 @@ names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill
 # def bubble(array):
 #     for i in range(len(array) - 1):
 #         for j in range(len(array) - i - 1):
-#             if array[j] > array[j + 1]:
-#                 array[j], array[j + 1] = array[j + 1], array[j]
+# #             if array[j] > array[j + 1]:
+# #                 array[j], array[j + 1] = array[j + 1], array[j]
+# #
+# #
+# #
+# # a = [randint(1, 99) for i in range(10)]
+# # print(a)
+# # start=time.monotonic()
+# # bubble(a)
+# # print(a)
+# # res=time.monotonic()-start
+# # print(round(res,3), 'sec')
 #
 #
+# # def sort2_func(*args):
+# #     s=+args
+# #     ch=int(input('Выберите тип сортировки: 1-по убыванию, 2- по возрастанию'))
+# def merge_sort(a):
+#     n = len(a)
+#     if n < 2:
+#         return a
 #
-# a = [randint(1, 99) for i in range(10)]
-# print(a)
+#     l = merge_sort(a[:n // 2])
+#     r = merge_sort(a[n // 2:n])
+#     i = j = 0
+#     res = []
+#     while i < len(l) or j < len(r):
+#         if not i < len(l):
+#             res.append(r[j])
+#             j += 1
+#         elif not j < len(r):
+#             res.append(l[i])
+#             i += 1
+#         elif l[i] > r[j]:
+#             res.append(l[i])
+#             i += 1
+#         else:
+#             res.append(r[j])
+#             j += 1
+#
+#     return res
+#
+#
+# array = [randint(1, 99) for i in range(20)]
+# print(array)
 # start=time.monotonic()
-# bubble(a)
-# print(a)
-# res=time.monotonic()-start
-# print(round(res,3), 'sec')
-
-
-# def sort2_func(*args):
-#     s=+args
-#     ch=int(input('Выберите тип сортировки: 1-по убыванию, 2- по возрастанию'))
-def merge_sort(a):
-    n = len(a)
-    if n < 2:
-        return a
-
-    l = merge_sort(a[:n // 2])
-    r = merge_sort(a[n // 2:n])
-    i = j = 0
-    res = []
-    while i < len(l) or j < len(r):
-        if not i < len(l):
-            res.append(r[j])
-            j += 1
-        elif not j < len(r):
-            res.append(l[i])
-            i += 1
-        elif l[i] > r[j]:
-            res.append(l[i])
-            i += 1
-        else:
-            res.append(r[j])
-            j += 1
-
-    return res
-
-
-array = [randint(1, 99) for i in range(20)]
-print(array)
-start=time.monotonic()
-array = merge_sort(array)
-print(array)
-#
+# array = merge_sort(array)
+# print(array)
+# #
 # res=time.monotonic()-start
 # print(round(res,3), 'sec')
 # def shell_sort(s):
@@ -1033,3 +1033,139 @@ print(array)
 # print(a)
 # res = time.monotonic() - start
 # print(round(res, 3), 'sec')
+
+
+# f = open('text.txt.txt', 'r')
+# print(*f)
+# f = open('C:\\Users\\Николай\\Desktop\\домашние задания\\DZ1 Glubokov NN\\text.txt.txt', 'r')
+# print(*f)
+# print(f.closed)
+# print(f.mode)
+# print(f.name)
+# print(f.encoding)
+# print(f.read(3))
+# print(f.read())
+# f.close()
+# try:
+#     print(f.read())
+# finally:
+#     f.close()
+
+# f = open('Testtext.txt', 'r')
+#
+# c=0
+# for line in f:
+#     print(line)
+#     c+=1
+# print(c)
+# f.close()
+# print(f.readline())
+# print(f.readline(7))
+# print(f.readline())
+# print(f.readline())
+# print(f.readline())
+# print(f.readlines(4))
+# f = open('NewText.txt', 'w')
+# print(f.write('Hello!\nWorld!'))
+# f.close()
+# f = open('text2.txt', 'w')
+# f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;")
+# f.close()
+#
+# f = open('text2.txt', 'r')
+# rd = f.readlines()
+# print(rd)
+# print()
+# sitr=int(input('Индекс удаляемого элемента--> '))
+# for i in range(len(rd)):
+#     if sitr==i:
+#         del rd[i]
+#     else:
+#
+# print(rd)
+# print()
+# f.close()
+#
+# f = open('text2.txt', 'w')
+# f.writelines(rd)
+# f.close()
+#
+# f = open('text2.txt', 'r')
+# for line in f:
+#     print(line)
+# print(f.read())
+# f.close()
+
+
+# f = open('C:\\Users\\Николай\\Desktop\\домашние задания\\DZ1 Glubokov NN\\text.txt.txt', 'r')
+# print(f.read(3))
+# print(f.tell())
+# print(f.seek(1))
+# print(f.read())
+# print(f.tell())
+# f = open('C:\\Users\\Николай\\Desktop\\домашние задания\\DZ1 Glubokov NN\\text.txt.txt', 'w+')
+# print(f.write('I am learning Python'))
+# print(f.seek(3))
+# print(f.write('-new string-'))
+# print(f.tell())
+# f.close()
+
+# with open('text.txt.txt','w+') as f:
+#     print(f.write('0123456789'))
+
+# with open('text.txt.txt','r') as f:
+#     for line in f:
+#         print(line[:6])
+
+# file_name = 'res1.txt'
+# lst = [4.5, 2.8, 3.9, 1.0, 0.3, 4.33, 7.777]
+#
+#
+# def get_line(lt):
+#     lt = list(map(str, lt))
+#     return ' '.join(lt)
+
+
+# print(get_line(lst))
+# #
+# with open(file_name,'w') as f:
+#     f.write(get_line(lst))
+#
+#
+#
+# with open(file_name,'r') as f:
+#     nums=f.read()
+#     lst=nums.split(' ')
+#     print(lst)
+#     print(len(lst))
+#
+#
+# print('Done!')
+file_name = 'res2.txt'
+#
+# with open(file_name, 'w') as f:
+#     f.write(
+#         'Чтобы разбить строку на фрагменты определенной длины, используйте функцию «Понимание списка» со строкой. Все фрагменты будут возвращены в виде массива. Мы также можем использовать цикл while, чтобы разделить список на части определенной длины. В этом руководстве мы узнаем, как разбить строку на фрагменты определенной длины с помощью подробных примеров программ в Python')
+#
+#
+# def longest_text(file):
+#     with open(file, 'r') as f:
+#         w = f.read().split()
+#         # print(w)
+#         max_length = len(max(w, key=len))
+#         # print(max_length)
+#         res=[word for word in w if len(word)==max_length]
+#         # print(res)
+#         if len(res)==1:
+#             return res[0]
+#         return res
+#
+#
+# print(longest_text(file_name))
+
+with open(file_name, 'r') as f:
+    lst=f.read().split()
+    print(lst)
+    max_length = max(len(word) for word in lst)
+    print([i for i in lst if len(i)==max_length])
+
