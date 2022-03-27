@@ -1068,23 +1068,23 @@ import time
 # f = open('NewText.txt', 'w')
 # print(f.write('Hello!\nWorld!'))
 # f.close()
-# f = open('text2.txt', 'w')
-# f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;")
-# f.close()
+f = open('text2.txt', 'w')
+f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;")
+f.close()
 #
-# f = open('text2.txt', 'r')
-# rd = f.readlines()
-# print(rd)
-# print()
-# sitr=int(input('Индекс удаляемого элемента--> '))
-# for i in range(len(rd)):
-#     if sitr==i:
-#         del rd[i]
-#     else:
-#
-# print(rd)
-# print()
-# f.close()
+f = open('text2.txt', 'r')
+rd = f.readlines()
+print(rd)
+print()
+sitr=int(input('Индекс удаляемого элемента--> '))
+for i in range(len(rd)):
+    if sitr==i:
+        del rd[i]
+    else:
+        pass
+print(rd)
+print()
+f.close()
 #
 # f = open('text2.txt', 'w')
 # f.writelines(rd)
@@ -1141,7 +1141,7 @@ import time
 #
 #
 # print('Done!')
-file_name = 'res2.txt'
+# file_name = 'res2.txt'
 #
 # with open(file_name, 'w') as f:
 #     f.write(
@@ -1162,10 +1162,10 @@ file_name = 'res2.txt'
 #
 #
 # print(longest_text(file_name))
-
-with open(file_name, 'r') as f:
-    lst=f.read().split()
-    print(lst)
-    max_length = max(len(word) for word in lst)
-    print([i for i in lst if len(i)==max_length])
-
+#
+# with open(file_name, 'r') as f:
+#     lst=f.read().split()
+#     print(lst)
+#     max_length = max(len(word) for word in lst)
+#     print([i for i in lst if len(i)==max_length])
+#
