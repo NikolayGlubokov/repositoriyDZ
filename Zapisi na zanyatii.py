@@ -1068,24 +1068,24 @@ import time
 # f = open('NewText.txt', 'w')
 # print(f.write('Hello!\nWorld!'))
 # f.close()
-f = open('text2.txt', 'w')
-f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;")
-f.close()
-#
-f = open('text2.txt', 'r')
-rd = f.readlines()
-print(rd)
-print()
-sitr=int(input('Индекс удаляемого элемента--> '))
-for i in range(len(rd)):
-    if sitr==i:
-        del rd[i]
-    else:
-        pass
-print(rd)
-print()
-f.close()
-#
+# f = open('text2.txt', 'w')
+# f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;")
+# f.close()
+# #
+# f = open('text2.txt', 'r')
+# rd = f.readlines()
+# print(rd)
+# print()
+# sitr=int(input('Индекс удаляемого элемента--> '))
+# for i in range(len(rd)):
+#     if sitr==i:
+#         del rd[i]
+#     else:
+#         pass
+# print(rd)
+# print()
+# f.close()
+# #
 # f = open('text2.txt', 'w')
 # f.writelines(rd)
 # f.close()
@@ -1168,4 +1168,119 @@ f.close()
 #     print(lst)
 #     max_length = max(len(word) for word in lst)
 #     print([i for i in lst if len(i)==max_length])
+
+# text='Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9\nСтрока №10'
+# with open('one.txt', 'w') as f:
+#     f.write(text)
+
+
+# read_file='one.txt'
+# write_file='two.txt'
 #
+# with open(read_file, 'r') as fr, open(write_file, 'w') as fw:
+#     for line in fr:
+#         line=line.replace('Строка', 'Линия - ')
+#         fw.write(line)
+
+
+import os
+# print('Текущая директория: ', os.getcwd())
+# print(os.listdir('.idea'))
+# os.mkdir('folder')
+# os.makedirs('nested1/nested2/nested3')
+# os.remove('Testtext.txt')
+# os.rename('nested1', 'test')
+#
+# os.renames('text2.txt','text/text1.txt')
+# os.rmdir('folder')
+# os.rmdir('text')
+#
+# for root, dirs, files in os.walk('test', topdown=False):
+#     print('Root: ', root)
+#     print('Subdirs: ',dirs)
+#     print('Files: ', files)
+#     print()
+# for root, dirs, files in os.walk('Work'):
+#     if not os.listdir(root):
+#         os.rmdir(root)
+#         print(f'Директория {root} удалена')
+import os.path
+
+#
+# print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
+#
+# print(os.path.dirname(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
+# print(os.path.basename(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
+# print(os.path.join('C:', 'Users', 'Desktop', 'Николай', 'домашние задания'))
+# dirs=['Work/F1', 'Work/F2/F21']
+# for d in dirs:
+#     os.makedirs(d)
+#
+# files={
+#     'Work':['w.txt'],
+#     'Work/F1':['f11.txt', 'f12.txt', 'f13.txt'],
+#     'Work/F2/F21':['f211.txt', 'f212.txt']
+# }
+#
+#
+# for d, fl in files.items():
+#     # print(d, fl)
+#     for file in fl:
+#         file_path=os.path.join(d, file)
+#         open(file_path, 'w').close()
+
+# file_with_text=['Work/w.txt', 'Work/F1/f12.txt','Work/F2//F21/f211.txt', 'Work/F2/F21/f212.txt']
+# for file in file_with_text:
+#     with open(file, 'w') as f:
+#         f.write(f'some sample text for {file} file')
+#     # for root, dirs, files in os.walk('Work', topdown=False):
+#     #     print('Root: ', root)
+#     #     print('Subdirs: ',dirs)
+#     #     print('Files: ', files)
+#     #     print()
+#     # for root, dirs, files in os.walk('Work', topdown=True):
+#     #     print('Root: ', root)
+#     #     print('Subdirs: ',dirs)
+#     #     print('Files: ', files)
+#     #     print()
+#
+#
+# def print_tree(root, topdown):
+#     print(f'Обход {root} {"сверху вниз" if topdown else "снизу вверх"}')
+#     for root, dirs, files in os.walk(root, topdown=topdown):
+#         print(root)
+#         print(dirs)
+#         print(files)
+#     print('*'*40)
+#
+# print_tree("Work", topdown=True)
+# print_tree("Work", topdown=False)
+
+# print(os.path.exists(r'Work/F2//F21/f211.txt'))
+# print(os.path.getsize(r'Work/F2//F21/f211.txt'))
+# print(os.path.getatime(r'Work/F2//F21/f211.txt'))
+# print(os.path.getctime(r'Work/F2//F21/f211.txt'))
+# print(os.path.getmtime(r'Work/F2//F21/f211.txt'))
+#
+# path = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
+#
+# size = os.path.getsize(path)
+# ksize = size // 1024
+# print(ksize)
+#
+# c=os.path.getctime(path)
+# b=time.strftime('%X.%m.%Y', time.localtime(c))
+#
+# print(b)
+# str2 = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
+#
+# if os.path.exists(str2):
+#     a = os.path.getctime(str2)
+#     print(os.path.split(str2)[0],'\n', os.path.split(str2)[1],'\n',  a)
+#
+#
+# else:
+#     print("Not")
+
+print(os.path.isfile(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+print(os.path.isdir(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
