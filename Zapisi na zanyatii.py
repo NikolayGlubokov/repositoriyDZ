@@ -1207,7 +1207,7 @@ import os
 import os.path
 
 #
-# print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
+print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
 #
 # print(os.path.dirname(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
 # print(os.path.basename(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
@@ -1272,15 +1272,15 @@ import os.path
 # b=time.strftime('%X.%m.%Y', time.localtime(c))
 #
 # print(b)
-# str2 = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
-#
-# if os.path.exists(str2):
-#     a = os.path.getctime(str2)
-#     print(os.path.split(str2)[0],'\n', os.path.split(str2)[1],'\n',  a)
-#
-#
-# else:
-#     print("Not")
+str2 = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
 
-print(os.path.isfile(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
-print(os.path.isdir(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+if os.path.exists(str2):
+    a = os.path.getctime(str2)
+    print(os.path.split(str2)[0],'\n', os.path.split(str2)[1],'\n',  a)
+
+
+else:
+    print("Not")
+#
+# print(os.path.isfile(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+# print(os.path.isdir(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
