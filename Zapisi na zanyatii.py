@@ -1206,8 +1206,11 @@ import os
 #         print(f'Директория {root} удалена')
 import os.path
 
-#
-print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
+
+# #
+# print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
+
+
 #
 # print(os.path.dirname(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
 # print(os.path.basename(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN.py'))
@@ -1271,16 +1274,231 @@ print(os.path.split(r'C:\Users\Николай\Desktop\домашние зада�
 # c=os.path.getctime(path)
 # b=time.strftime('%X.%m.%Y', time.localtime(c))
 #
-# print(b)
-str2 = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
-
-if os.path.exists(str2):
-    a = os.path.getctime(str2)
-    print(os.path.split(str2)[0],'\n', os.path.split(str2)[1],'\n',  a)
-
-
-else:
-    print("Not")
+# # print(b)
+# str2 = r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\DZ23 Glubokov NN.py'
 #
-# print(os.path.isfile(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
-# print(os.path.isdir(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+# if os.path.exists(str2):
+#     a = os.path.getctime(str2)
+#     print(os.path.split(str2)[0],'\n', os.path.split(str2)[1],'\n',  a)
+#
+#
+# else:
+#     print("Not")
+# #
+# # print(os.path.isfile(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+# # print(os.path.isdir(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub'))
+# class <Name>:
+#     свойство=значение
+#
+#     методы():#функция
+#         тело метода
+# class Point3D:
+#     pass
+# class Point:
+#     '''Класс для предоставления координат точек на плоскости'''
+#     x = 1
+#     y = 1
+#
+#     def set_course(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#
+# p1 = Point()
+#
+# p1.x = '100'
+# p1.y = 300
+# # print(type(p1))
+# # print(isinstance(p1, Point3D))
+# p1.set_course(3,8)
+# print(p1.__dict__)
+# # Point.set_course(p1, 'Elena')
+# p2 = Point()
+# p2.set_course(5,10)
+# print(p2.__dict__)
+# # print(p1.x, p1.y)
+# # print(p1.__dict__)
+# print(getattr(p1, 'x'))
+# print(getattr(p1, 'z', False))
+# print(hasattr(p1, 'z'))
+# print(hasattr(p1, 'y'))
+# print(setattr(p1, 'z',7))
+# print(p1.__dict__)
+# print(hasattr(p1, 'z'))
+#
+# delattr(p1, 'z')
+# print(p1.__dict__)
+# p2=Point()
+# print(p2.x, p2.y)
+# print(p2.__dict__)
+# print(Point.__doc__)
+# print(Point.__name__)
+# print(dir(Point))
+
+# class Human:
+#     name = "name"
+#     birthday="00.00.0000"
+#     phone='00-00-00'
+#     country='country'
+#     city='city'
+#     address='street, house'
+#
+#     def print_info(self):
+#         print(' Персональные данные '.center(40,'*'))
+#         print(f'Имя: {self.name}')
+#         print(f'Дата рождения: {self.birthday}\nТелефон: {self.phone}\nСтрана: {self.country}\nГород: {self.city}\nАдрес: {self.address}\n'+'='*40)
+#
+#     def input_info(self, first_name,birthday, phone, country, city, address):
+#         self.name=first_name
+#         self.birthday=birthday
+#         self.phone=phone
+#         self.country=country
+#         self.city=city
+#         self.address=address
+#     def set_name(self, name):
+#         self.name=name
+#
+#     def get_name(self):
+#         return self.name
+#
+#
+# h1=Human()
+#
+# h1.print_info()
+# h1.input_info('Юля',"23.05.1986","45-46-98","Россия", "Москва", "Ленина 1")
+# h1.print_info()
+# h1.set_name("Georg")
+# h1.print_info()
+# print(h1.get_name())
+# class Auto:
+#     name = ''
+#     year = ''
+#     work = ''
+#     power = ''
+#     color = ''
+#     price = ''
+#
+#     def car_info(self):
+#         print(
+#             f'Название модели: {self.name}\nГод выпуска: {self.year}\nПроизводитель: {self.work}\nМощность двигателя:'
+#             f' {self.power}\nЦвет авто: {self.color}\nЦена авто: {self.price}')
+#
+#     def info_car(self, n, y, w, p, c, pr):
+#         self.name = n
+#         self.year = y
+#         self.work = w
+#         self.power = p
+#         self.color = c
+#         self.price = pr
+#
+#     def power_auto(self, power):
+#         self.power=power
+#     def super_power(self):
+#         return self.power
+#
+# h1 = Auto()
+#
+# h1.info_car('BMW', "750", "Германия", "450", "Черный", "8000000")
+# h1.car_info()
+# h1.power_auto('400')
+# print(h1.super_power())
+
+
+# class Person:
+#     skill = 10
+#
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     def print_info(self):
+#         res = 20
+#         print('Dannie sotrudnika: ', self.name, self.surname)
+#
+#     def add_skill(self, k):
+#         self.skill += k
+#         print(f'Kvalifikacia sotrudnika {self.name}: ', self.skill, '\n')
+#
+#
+# p1 = Person('Viktor', 'Reznik')
+# p1.print_info()
+# p1.add_skill(3)
+# p2 = Person('Anna', 'Dolgih')
+# p2.print_info()
+# p2.add_skill(2)
+
+
+# class Point:
+#     # def __new__(cls, *args, **kwargs):
+#     #     print('Constructor')
+#     #     return super().__new__(cls)
+#
+#     def __init__(self, x=0, y=0):
+#         print('Inizializator')
+#         self.x = x
+#         self.y = y
+#
+#     def __del__(self):
+#         print('udalenie exemplyara ' + self.__class__.__name__)
+#
+#     def set_coords(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#
+# p1 = Point(5, 10)
+# print(p1.__dict__)
+# del p1
+# print(p1.x)
+# p2 = Point()
+# print(p2.__dict__)
+
+# class Point:
+#     count = 0
+#
+#     def __init__(self, x=0, y=0):
+#         print('Inizializator')
+#         self.x = x
+#         self.y = y
+#         Point.count += 1
+#
+#
+# p1 = Point(5, 10)
+#
+# p2 = Point(3, 20)
+# p3 = Point()
+# print(Point.count)
+# print(p1.count)
+# print(p2.count)
+
+
+class Robot:
+    k = 0
+
+    def __init__(self, name):
+        self.name = name
+        print(f'Hello! My name',self.name)
+        Robot.k += 1
+    def __del__(self):
+        print(self.name, "off")
+        Robot.k-=1
+        if Robot.k==0:
+            print(self.name, 'last')
+        else:
+            print('Working robots:', Robot.k)
+
+droid1 = Robot('R2D2')
+print(Robot.k)
+droid2 = Robot('C-3PO')
+print(Robot.k)
+droid3 = Robot('QQ-B6')
+print(Robot.k)
+droid4 = Robot('BQ-F3')
+print(Robot.k)
+del droid1
+del droid2
+del droid3
+del droid4
+
+
+print(Robot.k)
