@@ -1471,34 +1471,304 @@ import os.path
 # print(p1.count)
 # print(p2.count)
 
+#
+# class Robot:
+#     k = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         print(f'Hello! My name',self.name)
+#         Robot.k += 1
+#     def __del__(self):
+#         print(self.name, "off")
+#         Robot.k-=1
+#         if Robot.k==0:
+#             print(self.name, 'last')
+#         else:
+#             print('Working robots:', Robot.k)
+#
+# droid1 = Robot('R2D2')
+# print(Robot.k)
+# droid2 = Robot('C-3PO')
+# print(Robot.k)
+# droid3 = Robot('QQ-B6')
+# print(Robot.k)
+# droid4 = Robot('BQ-F3')
+# print(Robot.k)
+# del droid1
+# del droid2
+# del droid3
+# del droid4
 
-class Robot:
-    k = 0
-
-    def __init__(self, name):
-        self.name = name
-        print(f'Hello! My name',self.name)
-        Robot.k += 1
-    def __del__(self):
-        print(self.name, "off")
-        Robot.k-=1
-        if Robot.k==0:
-            print(self.name, 'last')
-        else:
-            print('Working robots:', Robot.k)
-
-droid1 = Robot('R2D2')
-print(Robot.k)
-droid2 = Robot('C-3PO')
-print(Robot.k)
-droid3 = Robot('QQ-B6')
-print(Robot.k)
-droid4 = Robot('BQ-F3')
-print(Robot.k)
-del droid1
-del droid2
-del droid3
-del droid4
+#
+# print(Robot.k)
 
 
-print(Robot.k)
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = self.__y = 0
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#
+#     def set_x(self, x):
+#         self.__x = x
+#
+#     def get_x(self):
+#         return self.__x
+#
+#     def __check_value(z):
+#         if isinstance(z, int) or isinstance(z, float):
+#             return True
+#         return False
+#
+#     def set_coords(self, x, y):
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#         else:
+#             print("Coord is not int")
+#
+#     def get_coords(self):
+#         return self.__x, self.__y
+#
+#
+# p1 = Point(5, 10)
+# # p1.set_x(100)
+# # print(p1.get_x())
+# # p1.set_coords(50.56, 70)
+# print(p1.get_coords())
+# # print(p1.__check_value)
+# # print(p1.__x)
+# # print(p1.__y)
+# # p1.__x = 100
+# # p1.y = 'abc'
+# # print(p1.x)
+# # print(p1.y)
+# print(p1.__dict__)
+# print(p1._Point__x)
+# p1._Point__x=111
+# print(p1.__dict__)
+#
+# class Rectangle:
+#
+#     def __init__(self, x, y):
+#         self.__x = self.__y = 0
+#         if Rectangle.__check_value(x) and Rectangle.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#
+#     def __check_value(z):
+#         if isinstance(z, (int, float)):
+#             return True
+#         return False
+#
+#     def set_x(self, x):
+#         if Rectangle.__check_value(x):
+#             self.__x = x
+#
+#     def set_y(self, y):
+#         if Rectangle.__check_value(y):
+#             self.__y = y
+#
+#     def get_x(self):
+#         return self.__x
+#
+#     def get_y(self):
+#         return self.__y
+#
+#     def get_area(self):
+#         return self.__x * self.__y
+#
+#     def get_perim(self):
+#         return 2 * (self.__x + self.__y)
+#
+#     def get_gipp(self):
+#         return sqrt(self.__x ** 2 + self.__y ** 2)
+#
+#     def print_area(self):
+#         # for i in range(self.__x):
+#         #     print('*'*self.__y)
+#         print(('*' * self.__y + '\n') * self.__x)
+#
+
+# r1 = Rectangle(3, 4)
+# a=int(input('Visota: '))
+# b=int(input('Shirina: '))
+# r1.set_x(a)
+# r1.set_y(b)
+# print(r1.get_y(), r1.get_x())
+# print(r1.get_area())
+# print(r1.get_perim())
+# print(round(r1.get_gipp(),2))
+
+# r1.print_area()
+#
+# r2 = Rectangle(2, 14)
+# r2.print_area()
+# r3 = Rectangle(4, 8)
+# r3.print_area()
+
+#
+# class Point:
+#
+#     __slots__ = ['__x', '__y','z']
+#
+#     def __init__(self, x, y):
+#         self.__x = self.__y = 0
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#
+#     def set_x(self, x):
+#         self.__x = x
+#
+#     def get_x(self):
+#         return self.__x
+#
+#     def __check_value(z):
+#         if isinstance(z, int) or isinstance(z, float):
+#             return True
+#         return False
+#
+#     def set_coords(self, x, y):
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#         else:
+#             print("Coord is not int")
+#
+#     def get_coords(self):
+#         return self.__x, self.__y
+#
+#     def __getattr__(self, item):
+#         return f'V klasse {__class__.__name__} otsutstvuet atribut "{item}"'
+#
+#     def __getattribute__(self, item):
+#         if item == "_Point__x":
+#             return 'Zakritaya peremennaya'
+#         else:
+#             return object.__getattribute__(self, item)
+#
+#     def __setattr__(self, key, value):
+#         if key == "WIDTH":
+#             raise AttributeError('Nelzya izmenyati')
+#         else:
+#             self.__dict__[key] = value
+#
+#
+# p1 = Point(5, 10)
+# # # p1.zzz=12
+# # print(p1.zzz)
+# # p1.set_coords(45, 20)
+# # print(p1._Point__x)
+# # print(p1.get_coords())
+# print(p1.__dict__)
+#
+# # p1.WIDTH = 4
+# p1.z = 1
+# print(p1.__dict__)
+#
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__xy = y
+#
+#     def __set_x(self, x):
+#         print('Setter')
+#         if isinstance(x,(int,float)):
+#             self.__x = x
+#         else:
+#             raise ValueError('  ***   ')
+#
+#     def __get_x(self):
+#         print('Getter')
+#         return self.__x
+#
+#     def __del_x(self):
+#         print('Udalenie svoystva')
+#         del self.__x
+#
+#     coordX = property(__get_x, __set_x, __del_x)
+#
+# p1 = Point(5,10)
+# p1.coordX=100
+# print(p1.coordX)
+# del p1.coordX
+# print(p1.__dict__)
+
+#
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__xy = y
+#
+#     @property
+#     def x(self):
+#         print('Getter')
+#         return self.__x
+#
+#     @x.setter
+#     def x(self, x):
+#         print('Setter')
+#         if isinstance(x, (int, float)):
+#             self.__x = x
+#         else:
+#             raise ValueError('  ***   ')
+#
+#
+#
+#     @x.deleter
+#     def x(self):
+#         print('Udalenie svoystva')
+#         del self.__x
+#
+#     # coordX = property(__get_x, __set_x, __del_x)
+#
+#
+# p1 = Point(5, 10)
+# p1.x = 100
+# print(p1.x)
+# del p1.x
+# print(p1.__dict__)
+
+class Person:
+    def __init__(self, name, old):
+        self.__name = name
+        self.__old = old
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, n):
+        self.__name = n
+
+    @name.deleter
+    def name(self):
+        del self.__name
+
+    @property
+    def old(self):
+        return self.__old
+
+    @old.setter
+    def old(self, n):
+        self.__old = n
+
+    @old.deleter
+    def old(self):
+        del self.__old
+
+
+p1 = Person('Irina', 26)
+print(p1.__dict__)
+p1.name = 'Igor'
+print(p1.name)
+del p1.name
+print(p1.__dict__)
+p1.old = 'old'
+print(p1.old)
+del p1.old
+print(p1.__dict__)
