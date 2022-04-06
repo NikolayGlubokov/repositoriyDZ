@@ -23,7 +23,7 @@ class Pound:
         if isinstance(x, int) or isinstance(x, float):
             self.__x = x
         else:
-            self.__x = 1
+            self.__x = self.__x
 
     @x.deleter
     def x(self):
