@@ -1701,7 +1701,7 @@ import os.path
 # class Point:
 #     def __init__(self, x, y):
 #         self.__x = x
-#         self.__xy = y
+#         self.__y = y
 #
 #     @property
 #     def x(self):
