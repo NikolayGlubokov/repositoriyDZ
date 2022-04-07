@@ -1732,43 +1732,272 @@ import os.path
 # del p1.x
 # print(p1.__dict__)
 
-class Person:
-    def __init__(self, name, old):
-        self.__name = name
-        self.__old = old
+# class Person:
+#     def __init__(self, name, old):
+#         self.__name = name
+#         self.__old = old
+#
+#     @property
+#     def name(self):
+#         return self.__name
+#
+#     @name.setter
+#     def name(self, n):
+#         self.__name = n
+#
+#     @name.deleter
+#     def name(self):
+#         del self.__name
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, n):
+#         self.__old = n
+#
+#     @old.deleter
+#     def old(self):
+#         del self.__old
+#
+#
+# p1 = Person('Irina', 26)
+# print(p1.__dict__)
+# p1.name = 'Igor'
+# print(p1.name)
+# del p1.name
+# print(p1.__dict__)
+# p1.old = 'old'
+# print(p1.old)
+# del p1.old
+# print(p1.__dict__)
 
-    @property
-    def name(self):
-        return self.__name
+# class Point:
+#     count = 0  # staticheskoe svoistvo
+#
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#         Point.__count += 1
+#
+#     @staticmethod
+#     def get_count():
+#         return Point.__count
+#
+#     # get_count = staticmethod(get_count)
+#
+#
+# p1 = Point(5, 4)
+# p2 = Point()
+#
+# p3 = Point()
+#
+# print(Point.get_count())
+# print(p2.get_count())
 
-    @name.setter
-    def name(self, n):
-        self.__name = n
+# hfpj,hfnmcz
+#
+# class Change:
+#     @staticmethod
+#     def inc(x):
+#         return x + 1
+#
+#     @staticmethod
+#     def dec(x):
+#         return x - 1
+#
+# print(Change.inc(10), Change.dec(10))
+#
+# class Point:
+#
+#     @staticmethod
+#     def max(a, b, c, d):
+#         if a > b > c > d:
+#             return a
+#         elif b > a > c > d:
+#             return b
+#         elif c > a > b > d:
+#             return c
+#         else:
+#             return d
+#
+#     @staticmethod
+#     def min(a, b, c, d):
+#         if a < b < c < d:
+#             return a
+#         elif b < a < c < d:
+#             return b
+#         elif c < a < b < d:
+#             return c
+#         else:
+#             return d
+#
+#     @staticmethod
+#     def average(a, b, c, d):
+#         return (a + b + c + d) / 4
+#
+#     @staticmethod
+#     def factorial(x):
+#         c=1
+#         for i in range(1,x+1):
+#             c*=i
+#         return c
+#
+#
+#
+#
+# print(Point.max(6, 7, 3, 2))
+# print(Point.min(6, 7, 3, 2))
+# print(Point.average(6, 7, 3, 2))
+# print(Point.factorial(9))
+#
+# class Point:
+#     count=0
+#
+#     @staticmethod
+#     def fareng(x):
+#         Point.count+=1
+#         return x*(9/5)+32
+#
+#     @staticmethod
+#     def celsius(x):
+#         Point.count -= 1
+#         return (x  - 32)/1.8
+#
+# print(Point.count)
+# print(Point.fareng(15))
+# print(Point.count)
+# print(Point.fareng(34))
+# print(Point.count)
+# print(Point.celsius(93.2))
+# print(Point.count)
 
-    @name.deleter
-    def name(self):
-        del self.__name
+# class Date:
+#     def __init__(self, day=0, month=0, year=0):
+#         self.day = day
+#         self.month = month
+#         self.year = year
+#
+#     def string_to_db(self):
+#         return f'{self.year} - {self.month} - {self.day}'
+#
+#     @classmethod
+#     def from_string(cls, date_as_string):
+#         day, month, year = map(int, date_as_string.split('.'))
+#         date1 = cls(day, month, year)
+#         return date1
+#
+#     @staticmethod
+#     def is_date_validate(date_as_string):
+#         if date_as_string.count('.') == 2:
+#             day, month, year = map(int, date_as_string.split('.'))
+#             return day <=31 and month <= 12 and year <= 9999
+#
+#
+# # date = Date.from_string('23.10.2021')
+# # print(date.string_to_db())
+# # date = Date.from_string('24.10.2021')
+# # print(date.string_to_db())
+#
+# dates = ['30.12.2020', '20-12-2020', '01.01.2020', '12.31.2020']
+#
+# for string_date in dates:
+#     if Date.is_date_validate(string_date):
+#         date = Date.from_string(string_date)
+#         string_to_db = date.string_to_db()
+#         print(string_to_db)
+#     else:
+#         print("Not")
 
-    @property
-    def old(self):
-        return self.__old
+class Account:
+    suffix = 'RUB'
+    rate_eur = 0.011
+    rate_usd = 0.013
+    suffix_usd = 'USD'
+    suffix_eur = 'EUR'
 
-    @old.setter
-    def old(self, n):
-        self.__old = n
+    def __init__(self, num, surname, percent, value=0):
+        self.__num = num
+        self.__surname = surname
+        self.__percent = percent
+        self.__value = value
+        print(f' Счет #{self.__num} принадлежаций {self.__surname} был открыт.')
+        print('*' * 50)
 
-    @old.deleter
-    def old(self):
-        del self.__old
+    @classmethod
+    def set_usd_rate(cls, rate):
+        cls.rate_usd = rate
+
+    @classmethod
+    def set_eur_rate(cls, rate):
+        cls.rate_eur = rate
+
+    def edit_owner(self, surname):
+        self.surname = surname
+
+    def add_percents(self):
+        self.__value += self.__value * self.__percent
+        print('Проценты успешно начислены')
+        self.print_balance()
+
+    def print_balance(self):
+        print(f'Текущий баланс {self.__value} {Account.suffix}')
+
+    def print_info(self):
+        print('Информация о счете: ')
+        print('-' * 20)
+        print(f'#{self.__num}')
+        print(f'{self.__surname}')
+        self.print_balance()
+        print(f'Проценты {self.__percent:.0%}')
+        print('-' * 20)
+
+    @staticmethod
+    def convert(value, rate):
+        return value * rate
+
+    def convert_to_usd(self):
+        usd_val = Account.convert(self.__value, Account.rate_usd)
+        print(f'Состояние счета: {usd_val} {Account.suffix_usd}')
+
+    def convert_to_eur(self):
+        eur_val = Account.convert(self.__value, Account.rate_eur)
+        print(f'Состояние счета: {eur_val} {Account.suffix_eur}')
+
+    def withdrow_money(self,val):
+        if val<self.__value:
+            self.__value=self.__value-val
+            print(f'Вы сняли {val} {Account.suffix}')
+            self.print_balance()
+        else:
+            print(f'Снять нельзя {val} {Account.suffix}')
+            self.print_balance()
+    def add_money(self,val):
+        self.__value+=val
+        print(f'Вы внесли на счет {val} {Account.suffix}')
+        self.print_balance()
+
+    def __del__(self):
+        print('*'*20)
+        print(f'Счёт закрыт')
 
 
-p1 = Person('Irina', 26)
-print(p1.__dict__)
-p1.name = 'Igor'
-print(p1.name)
-del p1.name
-print(p1.__dict__)
-p1.old = 'old'
-print(p1.old)
-del p1.old
-print(p1.__dict__)
+
+acc = Account('12345', 'Долгих', 0.03, 1000)
+# acc.print_balance()
+acc.print_info()
+acc.convert_to_usd()
+acc.convert_to_eur()
+# print()
+# Account.set_usd_rate(2)
+# acc.convert_to_usd()
+# Account.set_eur_rate(3)
+# acc.convert_to_eur()
+acc.edit_owner('Дюма')
+acc.print_info()
+acc.add_percents()
+acc.withdrow_money(200)
+acc.add_money(5000)
+acc.withdrow_money(3000)
+# acc.__del__()

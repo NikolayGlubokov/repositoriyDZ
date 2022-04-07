@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0032afe7-8e08-4603-85cf-e8b2434a7e8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ27 Glubokov NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ27 Glubokov NN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zapisi na zanyatii.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zapisi na zanyatii.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.DZ27 Glubokov NN">
+  <component name="RunManager" selected="Python.Zapisi na zanyatii">
     <configuration name="DZ24 Glubokov NN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DZ27 Glubokov NN" />
         <item itemvalue="Python.Zapisi na zanyatii" />
+        <item itemvalue="Python.DZ27 Glubokov NN" />
         <item itemvalue="Python.DZ26 Glubokov NN" />
         <item itemvalue="Python.DZ25 Glubokov NN" />
         <item itemvalue="Python.DZ24 Glubokov NN" />
