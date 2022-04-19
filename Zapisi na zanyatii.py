@@ -1206,7 +1206,6 @@ import os
 #         print(f'Директория {root} удалена')
 import os.path
 
-
 # #
 # print(os.path.split(r'C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN'))
 
@@ -2290,66 +2289,66 @@ import os.path
 # print(v)
 # print(type(v))
 
-
-class Point:
-    def __init__(self, x=0, y=0):
-        self.__x = x
-        self.__y = y
-
-    def __str__(self):
-        return f"({self.__x}, {self.__y})"
-
-    def is_digit(self):
-        if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
-            return True
-        return False
-
-    def is_int(self):
-        if isinstance(self.__x, int, ) and isinstance(self.__y, int):
-            return True
-        return False
-
-
-class Prop:
-    def __init__(self, sp: Point, ep: Point, color: str = 'red', width: int = 1):
-        self._sp = sp
-        self._ep = ep
-        self._color = color
-        self._width = width
-
-    def set_coords(self, sp, ep):
-        if sp.is_digit() and ep.is_digit():
-            self._ep = ep
-            self._sp = sp
-        else:
-            print('Not')
-
-
-class Line(Prop):
-    def draw_line(self):
-        print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
-
-    def set_coords(self, sp: Point, ep: Point = None):
-        if ep is None:
-            if sp.is_int():
-                self._sp = sp
-            else:
-                print("Координаты должны быть целочисленными")
-        else:
-            if sp.is_int() and ep.is_int():
-                self._ep = ep
-                self._sp = sp
-            else:
-                print('Not int')
-
-
-line = Line(Point(1, 2), Point(10, 20))
-line.draw_line()
-line.set_coords(Point(9, 8), Point(8, 10))
-line.draw_line()
-line.set_coords(Point(-10,-15))
-line.draw_line()   #Дописать нормально.
-
+#
+# class Point:
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int, ) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = 'red', width: int = 1):
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#     def set_coords(self, sp, ep):
+#         if sp.is_digit() and ep.is_digit():
+#             self._ep = ep
+#             self._sp = sp
+#         else:
+#             print('Not')
+#
+#
+# class Line(Prop):
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#     def set_coords(self, sp: Point, ep: Point = None):
+#         if ep is None:
+#             if sp.is_int():
+#                 self._sp = sp
+#             else:
+#                 print("Координаты должны быть целочисленными")
+#         else:
+#             if sp.is_int() and ep.is_int():
+#                 self._ep = ep
+#                 self._sp = sp
+#             else:
+#                 print('Not int')
+#
+#
+# line = Line(Point(1, 2), Point(10, 20))
+# line.draw_line()
+# line.set_coords(Point(9, 8), Point(8, 10))
+# line.draw_line()
+# line.set_coords(Point(-10,-15))
+# line.draw_line()   #Дописать нормально.
+#
 
 
 #
@@ -2488,6 +2487,7 @@ line.draw_line()   #Дописать нормально.
 # print(t3.__dict__)
 # print(t3.calc_area())
 from abc import ABC, abstractmethod
+
 
 # class Chess(ABC):
 #     def draw(self):
@@ -2631,3 +2631,372 @@ from abc import ABC, abstractmethod
 # outer.show()
 # q = outer.lg
 # q.display()
+#
+# class Employee:
+#     def __init__(self):
+#         self.name = "Employee"
+#         self.intern = self.Intern()
+#         self.head = self.Head()
+#
+#     def show(self):
+#         print('Employee list')
+#         print(self.name)
+#
+#     class Intern:
+#         def __init__(self):
+#             self.name = "Smith"
+#             self.id = '657'
+#
+#         def display(self):
+#             print('Name:', self.name)
+#             print('ID:', self.id)
+#
+#     class Head:
+#         def __init__(self):
+#             self.name = "Alba"
+#             self.id = '007'
+#
+#         def display(self):
+#             print('Name:', self.name)
+#             print('ID:', self.id)
+#
+#
+# outer = Employee()
+# outer.show()
+#
+# d1 = outer.intern
+# d2 = outer.head
+# print()
+# d1.display()
+# print()
+# d2.display()
+#
+# class Outer:
+#     def __init__(self):
+#         self.inner = self.Inner()
+#
+#     def show(self):
+#         print("class Outer")
+#
+#     class Inner:
+#         def __init__(self):
+#             self.inner_inner = self.InnerClass()
+#
+#         def show(self):
+#             print('Class Inner')
+#
+#         class InnerClass:
+#
+#             def show(self):
+#                 print('Class InnerClass')
+#
+#
+# outer = Outer()
+# outer.show()
+#
+# inner1 = outer.inner
+# inner1.show()
+#
+# inner2=inner1.inner_inner
+# inner2.show()
+#
+# class Computer:
+#     def __init__(self):
+#         self.name='CP001'
+#         self.os=self.OS()
+#         self.cpu=self.CPU()
+#     class OS:
+#         def system(self):
+#             return 'Windows 10'
+#
+#     class CPU:
+#         def make(self):
+#             return 'Intel'
+#         def model(self):
+#             return 'Core-i7'
+#
+# comp=Computer()
+# my_os=comp.os
+# my_cpu=comp.cpu
+# print(comp.name)
+# print(my_os.system())
+# print(my_cpu.make())
+# print(my_cpu.model())
+
+
+# class Base:
+#
+#     def __init__(self):
+#         self.db = self.Inner()
+#
+#     def display(self):
+#         print('Class Base')
+#
+#     class Inner:
+#
+#         def display1(self):
+#             print('Inner of Base Class')
+#
+#
+# class SubClas(Base):
+#     def __init__(self):
+#         print('In SubClass')
+#         super().__init__()
+#
+#     class Inner(Base.Inner):
+#         def display2(self):
+#             print('Inner of SubClass')
+#
+#
+# a=SubClas()
+# a.display()
+# # b=a.db
+# b=SubClas.Inner()
+# b.display1()
+# b.display2()
+#
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+#         self.note = self.Notebook()
+#     def show(self):
+#         print(self.name, '==>',end=' ')
+#         self.note.show()
+#     class Notebook:
+#         def __init__(self):
+#             self.model= 'HP'
+#             self.cpu= 'i7'
+#             self.memory='16'
+#
+#         def show(self):
+#             print(self.model, self.cpu, self.memory)
+# s1=Student('Roman')
+# s1.show()
+# s2=Student("Vladimir")
+# s2.show()
+
+# class Creature:
+#     def __init__(self, name):
+#         self.name = name
+#
+#
+# class Animal(Creature):
+#     def sleep(self):
+#         print(self.name, 'is sleeping')
+#
+#
+# class Pet(Creature):
+#     def play(self):
+#         print(self.name, 'is playing')
+#
+#
+# class Dog(Animal, Pet):
+#     def bark(self):
+#         print(self.name, 'is barking')
+#
+#
+# d = Dog('Buddy')
+# d.sleep()
+# d.play()
+# d.bark()
+
+# class A:
+#     # def __init__(self):
+#     #     print('Инициализатор класса А')
+#     def hi(self):
+#         print('A')
+#
+# class AA:
+#     def hi(self):
+#         print('AA')
+#
+# class B(A):
+#     # def __init__(self):
+#     #     print('Инициализатор класса B')
+#     def hi(self):
+#         print('B')
+#
+#
+# class C(AA):
+#     # def __init__(self):
+#     #     print('Инициализатор класса C')
+#     def hi(self):
+#         print('C')
+#
+#
+# class D(B, C):
+#     # def __init__(self):
+#     #     B.__init__(self)
+#     #     print('Инициализатор класса D')
+#     #     C.__init__(self)
+#     def call_hi(self):
+#         C.hi(self)
+#
+#
+# d = D()
+# d.call_hi()
+# print(D.mro())
+
+#
+# class Point:
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f'({self.__x},{self.__y})'
+#
+#
+# class Style:
+#     def __init__(self, color='red', width=1):
+#         print('нициализатор Style')
+#         self._color = color
+#         self._width = width
+#
+#
+# class Pos:
+#     def __init__(self, sp: Point, ep: Point, *args):
+#         print('Инициализатор Pos')
+#         self._sp = sp
+#         self._ep = ep
+#         Style.__init__(self, *args)
+#
+#
+# class Line(Pos, Style):
+#     def draw(self):
+#         print(f'Рисование линии: {self._sp},'
+#               f'{self._ep}, {self._color}, {self._width}')
+#
+#
+# l1 = Line(Point(10, 10), Point(100, 100), 'green', 5)
+# l1.draw()
+#
+# class Point:
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+# class Style:
+#     def __init__(self):
+#         print("Инициализатор Style")
+#         # super().__init__()
+#
+# class Pos:
+#     def __init__(self):
+#         print("Инициализатор Pos")
+#         # super().__init__()
+#
+# class Line(Pos, Style):
+#     def __init__(self, color, width, sp: Point, ep: Point):
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#         super().__init__()
+#     def draw(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+# l1 = Line("green", 5, Point(10, 10), Point(100, 100))
+# l1.draw() Разобраться с тем, что написано выше
+
+#
+# class Displayer:
+#     @staticmethod
+#     def display(message):
+#         print(message)
+#
+#
+# class LoggerMixin:
+#     def log(self, message, filename='logfile.txt'):
+#         with open(filename, 'a') as fh:
+#             fh.write(message)
+#
+#     def display(self, message):
+#         Displayer.display(message)
+#         self.log(message)
+#
+#
+# class MySubClas(LoggerMixin, Displayer):
+#     def log(self, message, filename=' '):
+#         super().log(message, filename='subclasslog.txt')
+#
+#
+# subclass = MySubClas()
+# subclass.display('Эта строка будет отображаться и записываться в файл')
+# ghjcvjnhtnm b 'njn ghbvth
+#
+# class Goods:
+#     def __init__(self, name, weight, price):
+#         super().__init__()
+#         print("Инициализатор Goods")
+#         self.name = name
+#         self.weight = weight
+#         self.price = price
+#
+#     def print_info(self):
+#         print(f'{self.name}, {self.price}, {self.weight}')
+#
+#
+# class MixinLog:
+#     ID = 0
+#
+#     def __init__(self):
+#         print("Инициализатор Mixinlog")
+#         self.ID += 1
+#         self.id = self.ID
+#
+#     def save_sell_log(self):
+#         print(f'{self.id}: товар был продан в 00:00 ')
+#
+#
+# class NoteBook(Goods, MixinLog):
+#     pass
+#
+#
+# n = NoteBook('HP', 3.5, 35000)
+# n.print_info()
+# n.save_sell_log()
+# n.save_sell_log()
+# print(NoteBook.mro())
+
+
+class Clock:
+    __DAY = 86400
+
+    def __init__(self, sec: int):
+        if not isinstance(sec, int):
+            raise ValueError('Секунды должны быть числом')
+        self.__sec = sec % self.__DAY
+
+    def get_format_time(self):
+        s = self.__sec % 60
+        m = (self.__sec // 60) % 60
+        h = (self.__sec // 3600) % 24
+        return f'{Clock.__get_form(h)}:{Clock.__get_form(m)}:{Clock.__get_form(s)}'
+
+    @staticmethod
+    def __get_form(x):
+        return str(x) if x>9 else '0' + str(x)
+
+    def get_seconds(self):
+        return self.__sec
+
+    def __add__(self, other):
+        if not isinstance(other, Clock):
+            raise ArithmeticError('Правый операнд должен быть типом данных Clock')
+        return Clock(self.__sec + other.get_seconds())
+
+
+
+
+c1=Clock(100)
+c2=Clock(300)
+c4=Clock(300)
+c3=c1+c2+c4
+c4+=c1
+print(c1.get_format_time())
+print(c2.get_format_time())
+print(c4.get_format_time())
+print(c3.get_format_time())
