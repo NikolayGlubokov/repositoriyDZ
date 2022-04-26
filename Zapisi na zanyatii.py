@@ -3409,8 +3409,6 @@ from abc import ABC, abstractmethod
 #         self.y = y
 
 
-
-
 # class Point2D:
 #     __slots__ = ('x', 'y',)  #
 #     def __init__(self, x, y):
@@ -3437,4 +3435,323 @@ from abc import ABC, abstractmethod
 # pt3=Point3D(2,3,4)
 #
 #
-# print(pt3.__dict__)
+# print(pt3.__dict__
+
+# class Counter:
+#     def __init__(self):
+#         self.count=0
+#     def __call__(self, *args, **kwargs):
+#         self.count+=1
+#         print(self.count)
+#
+#
+# c1=Counter()
+# c1()
+# c1()
+# c2=Counter()
+# c2()
+#
+# class StripChars:
+#     def __init__(self, chars):
+#         self.chars=chars
+#
+#     def __call__(self, a):
+#         if not isinstance(a,str):
+#             raise ValueError('Avalaible type')
+#         return a.strip(self.chars)
+#
+# s1=StripChars(' &?!@#$%##')
+# print(s1(' @Hello World! '))
+#
+# def strio_chars(chars):
+#     def wrap(string):
+#         if not isinstance(string,str):
+#             raise ValueError('Avalaible type')
+#         return string.strip(chars)
+#
+#
+#     return wrap
+#
+#
+#
+#
+# s1=strio_chars(' &?!@#$%##')
+#
+# print(s1(' @Hello World! '))
+#
+# class SortSurname:
+#     def __init__(self, surname, name, age):
+#         self.surname=surname
+#         self.name=name
+#         self.age=age
+#
+#
+#     @property
+#     def data(self):
+#         return self.surname,self.name,self.age
+#
+# class SortKey:
+#     def __init__(self, *args):
+#         self.__method = args
+#
+#     def __call__(self, lst):
+#         lst.sort(key= lambda i: [i.__dict__[key] for key in self.__method])
+#
+# p=[SortSurname('Иванов', 'Игорь', 28),
+#    SortSurname('Петров', 'Степан', 21),
+#    SortSurname('Сидоров', 'Антон', 25),
+#    SortSurname('Петров', 'Анатолий', 11),
+#    SortSurname('Иванов', 'Иван', 28)]
+#
+# for i in p:
+#     print(i.data)
+#
+# s1=SortKey('surname', 'name')
+# s1(p)
+# print()
+# for i in p:
+#     print(i.data)
+#
+# print()
+#
+# s2=SortKey('surname', 'age')
+# s2(p)
+#
+# for i in p:
+#     print(i.data)
+#
+# class MyDecorator:
+#     def __init__(self, func):
+#         self.func=func
+#
+#     def __call__(self):
+#         print('Перед вызовом')
+#         self.func()
+#         print('После вызова')
+#
+# @MyDecorator
+# def func1():
+#     print('func')
+#
+# func1()
+
+#
+# class MyDecorator:
+#     def __init__(self, func):
+#         self.func = func
+#
+#     def __call__(self, a, b):
+#         res = self.func(a, b)
+#         print(res)
+#         return res**2
+#
+#
+# @MyDecorator
+# def func1(a, b):
+#     return a * b
+#
+#
+# print(func1(2, 5))
+
+#
+# class MyDecorator:
+#     def __init__(self, func):
+#         self.func = func
+#
+#     def __call__(self, *args):
+#         res = self.func(*args,**kwargs)
+#         print(res)
+#         return res**2
+
+#
+# class MyDecorator:
+#     def __init__(self, arg):
+#         self.name = arg
+#
+#     def __call__(self, func):
+#         def wrap(*args, **kwargs):
+#             print('*' * 10)
+#             res=func(*args, **kwargs)
+#
+#             print(res**self.name)
+#             print('*' * 10)
+#
+#         return wrap
+#
+#
+# @MyDecorator(4)
+# def add(a, b):
+#    print(a*b)
+#    return a*b
+#
+# add(2,5)
+
+#
+# def dec(fn):
+#     def wrap(*args,**kwargs):
+#         print('*'*10)
+#         fn(*args,**kwargs)
+#         print('*' * 10)
+#     return wrap
+#
+#
+#
+#
+# class Person:
+#
+#     def __init__(self, name, surname):
+#         self.name=name
+#         self.surname=surname
+#
+#     @dec
+#     def info(self):
+#         print(f'{self.name} {self.surname}')
+#
+#
+#
+# p1=Person('Виталий', 'Карасев')
+# p1.info()
+
+# def decorator(cls):
+#     class Wrapper(cls):
+#         def doubler(self, value):
+#             return value*2
+#     return Wrapper
+#
+# @decorator
+# class ActualClass:
+#     def __init__(self):
+#         print('Инициализатор ActualClass')
+#
+#     def quad(self, value):
+#         return value*4
+#
+# obj = ActualClass()
+#
+# print(obj.quad(4))
+# print(obj.doubler(5))
+
+# class StringD:
+#     def __init__(self, value=None):
+#         if value:
+#             self.set(value)
+#
+#     def set(self, value):
+#         self.__value = value
+#
+#     def get(self):
+#         return self.__value
+#
+#
+# class Person:
+#     def __init__(self, name, surname):
+#         self.name = StringD(name)
+#         self.surname = StringD(surname)
+#
+#     # @property
+#     # def name(self):
+#     #     return self.__name
+#     #
+#     # @name.setter
+#     # def name(self, value):
+#     #     self.__name=value
+#     #
+#     # @property
+#     # def surname(self):
+#     #     return self.__surname
+#     #
+#     # @name.setter
+#     # def surname(self, value):
+#     #     self.__surname = value
+#
+#
+# p = Person('Ivan', 'Petrov')
+# print(p.name.get())
+#
+
+
+# class ValidString:
+#     def __set_name__(self, owner, name):
+#         self.name=name
+#
+#     def __get__(self, instance, owner):
+#         return instance.__dict__[self.name]
+#
+#     def __set__(self, instance, value):
+#         if not isinstance(value, str):
+#             raise ValueError(f'{self.name} must be str')
+#         instance.__dict__[self.name] = value
+#
+#
+# class Person:
+#
+#     name = ValidString()
+#     surname=ValidString()
+#     def __init__(self, name, surname):
+#         self.name =name
+#         self.surname = surname
+#
+# p = Person('Ivan', 'Petrov')
+# print(p.name)
+#
+# class ValidString:
+#     def __set_name__(self, owner, name):
+#         self.name = name
+#
+#     def __get__(self, instance, owner):
+#         return instance.__dict__[self.name]
+#
+#     def __set__(self, instance, value):
+#         if value < 0:
+#             raise ValueError(f'{self.name} must be str')
+#         instance.__dict__[self.name] = value
+#
+#
+# class Order:
+#     price=ValidString()
+#     value=ValidString()
+#     def __init__(self, name, value, price):
+#         self.name = name
+#         self.value = value
+#         self.price = price
+#
+#     def total(self):
+#         return self.price * self.value
+#
+#
+# p = Order('apple', 5, 10)
+# print(p.total())
+
+class Integer:
+    @classmethod
+    def verify_coord(cls, coord):
+        if not isinstance(coord, int):
+            raise TypeError('Nea')
+
+
+    def __set_name__(self, owner, name):
+        self.name = '_' + name
+
+    def __get__(self, instance, owner):
+        # return instance.__dict__[self.name]
+        return getattr(instance, self.name)
+
+    def __set__(self, instance, value):
+        self.verify_coord(value)
+        # instance.__dict__[self.name]=value
+        setattr(instance, self.name, value)
+
+
+class Point3D:
+    x = Integer()
+    y = Integer()
+    z = Integer()
+
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+
+p1 = Point3D(1, 2, 3)
+print(p1.__dict__)
