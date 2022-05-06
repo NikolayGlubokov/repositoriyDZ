@@ -1,7 +1,7 @@
-from math import *
-from random import *
-import re
-import time
+# from math import *
+# from random import *
+# import re
+# import time
 
 #
 # def check_password(n, even=True):
@@ -2488,7 +2488,6 @@ import os.path
 # print(t3.calc_area())
 from abc import ABC, abstractmethod
 
-
 # class Chess(ABC):
 #     def draw(self):
 #         print('Нарисовал шахматную фигуру')
@@ -3721,37 +3720,216 @@ from abc import ABC, abstractmethod
 #
 # p = Order('apple', 5, 10)
 # print(p.total())
+#
+# class Integer:
+#     @classmethod
+#     def verify_coord(cls, coord):
+#         if not isinstance(coord, int):
+#             raise TypeError('Nea')
+#
+#
+#     def __set_name__(self, owner, name):
+#         self.name = '_' + name
+#
+#     def __get__(self, instance, owner):
+#         # return instance.__dict__[self.name]
+#         return getattr(instance, self.name)
+#
+#     def __set__(self, instance, value):
+#         self.verify_coord(value)
+#         # instance.__dict__[self.name]=value
+#         setattr(instance, self.name, value)
+#
+#
+# class Point3D:
+#     x = Integer()
+#     y = Integer()
+#     z = Integer()
+#
+#     def __init__(self, x, y, z):
+#         self.x = x
+#         self.y = y
+#         self.z = z
+#
+#
+# p1 = Point3D(1, 2, 3)
+# print(p1.__dict__)
+# a=5
+# print(type(a))
+# print(type(int))
 
-class Integer:
-    @classmethod
-    def verify_coord(cls, coord):
-        if not isinstance(coord, int):
-            raise TypeError('Nea')
+# class MyList(list):
+#     def get_lenght(self):
+#         return len(self)
 
 
-    def __set_name__(self, owner, name):
-        self.name = '_' + name
+# MyList=type(
+#     'MyList',
+#     (list,),
+#     dict(get_length=lambda self: len(self))
+# )
+#
+# lst=MyList()
+# lst.append(10)
+# lst.append(20)
+# print(lst, lst.get_length())
+#
+# class MyMetaClass(type):
+#     def __new__(mcs, name, base, attr):
+#         print('Sozdanie novogo objecta', name)
+#         return super(MyMetaClass, mcs).__new__(mcs, name, base, attr)
+#
+#     def __init__(cls, name, base, attr):
+#         print('Inicializator classa', name)
+#         super(MyMetaClass,cls).__init__(name, base, attr)
+#
+#
+# class Student(metaclass=MyMetaClass):
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def get_name(self):
+#         return self.name
+#
+#
+# stud=Student('Anna')
+# print('Bvz studenta:', stud.get_name())
 
-    def __get__(self, instance, owner):
-        # return instance.__dict__[self.name]
-        return getattr(instance, self.name)
+# import geometry.rect
+# import geometry.sq
+# import geometry.trian
+from geometry import rect, sq, trian
 
-    def __set__(self, instance, value):
-        self.verify_coord(value)
-        # instance.__dict__[self.name]=value
-        setattr(instance, self.name, value)
+# from geometry import *
+
+# r1 = geometry.rect.Rectangle(1, 2)
+# r2 = geometry.rect.Rectangle(3, 4)
+# s1 = geometry.sq.Square(10)
+# s2 = geometry.sq.Square(20)
+# t1 = geometry.trian.Triangle(1, 2, 3)
+# t2 = geometry.trian.Triangle(4, 5, 6)
+r1 = rect.Rectangle(1, 2)
+r2 = rect.Rectangle(3, 4)
+s1 = sq.Square(10)
+s2 = sq.Square(20)
+t1 = trian.Triangle(1, 2, 3)
+t2 = trian.Triangle(4, 5, 6)
+shape = [r1, r2, s1, s2, t1, t2]
+for g in shape:
+    print(g.get_perimetr())
+
+# from car import electrocar
+#
+# def main():
+#     e_car = electrocar.ElectroCar('Tesla', 'T', 2018, 99000)
+#     e_car.show_car()
+#     e_car.description_battery()
+#
+# if __name__=='__main__':
+#     main()
+
+# dump() - сохраняет данные в файл
+# dumps() - в оперативную память
+# load() - десерилизация (считывание) данных из файла
+# loads() - из памяти
+import pickle
 
 
-class Point3D:
-    x = Integer()
-    y = Integer()
-    z = Integer()
+#
+# filename = 'basket.txt'
+#
+# shop_list= {
+#     'fruit':['apples', 'mango'],
+#     'vegetables':['carrot'],
+#     'budget':1000
+# }
+#
+# with open(filename,'wb') as fh:
+#     pickle.dump(shop_list, fh)
+#
+# with open(filename,'rb') as fh:
+#     shop_list_2=pickle.load(fh)
+#
+# print(shop_list_2)
 
-    def __init__(self, x, y, z):
-        self.x = x
-        self.y = y
-        self.z = z
-
-
-p1 = Point3D(1, 2, 3)
-print(p1.__dict__)
+# class Text:
+#     a_number = 35
+#     a_string='Hello'
+#     a_list=[1,2,3,4,5]
+#     a_dict={'first':'a', 'second':2, 'third':[1,2,3]}
+#     a_tuple=(22,33)
+#
+#     def __str__(self):
+#         return f'Число: {Text.a_number}\n'\
+#                f'Число: {Text.a_string}\n'\
+#                f'Число: {Text.a_list}\n'\
+#                f'Число: {Text.a_dict}\n'\
+#                f'Число: {Text.a_tuple}\n'
+# obj=Text()
+#
+# my_obj=pickle.dumps(obj)
+# print(my_obj)
+#
+# l_obj=pickle.loads(my_obj)
+# print(l_obj)
+#
+# class Test2:
+#     def __init__(self):
+#         self.a = 35
+#         self.b = 'sdfsdf'
+#         self.c = lambda x: x ** 2
+#
+#     def __str__(self):
+#         return f'{self.a}, {self.b}, {self.c(2)}'
+#
+#     def __getstate__(self):
+#         attr = self.__dict__.copy()
+#         del attr['c']
+#         return attr
+#
+#     def __setstate__(self, state):
+#         self.__dict__ = state
+#         self.c = lambda x: x ** 2
+#
+#
+# item1 = Test2()
+# print(item1)
+# item2 = pickle.dumps(item1)
+# item3 = pickle.loads(item2)
+# print(item3.__dict__)
+#
+# class TextReader:
+#     def __init__(self, filename):
+#         self.filename = filename
+#         self.file = open(filename)
+#         self.count = 0
+# 
+#     def read_line(self):
+#         self.count += 1
+#         line = self.file.readline()
+#         if not line:
+#             return None
+#         if line.endswith('\n'):
+#             line = line[:-1]
+# 
+#         return f'{self.count}:{line}'
+# 
+#     def __getstate__(self):
+#         state = self.__dict__.copy()
+#         del state['file']
+#         return state
+#     def __setstate__(self, state):
+#         self.__dict__.update(state)
+#         self.file = open(self.filename)
+#         for i in range(self.count):
+#             file.readline()
+# 
+#         self.file = file
+# 
+# 
+# reader = TextReader('dream.txt')
+# print(reader.read_line())
+# print(reader.read_line())
+# 
+# new_reader = pickle.loads(pickle.dumps(reader))
+# print(new_reader.read_line())
