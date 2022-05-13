@@ -1,14 +1,13 @@
 from math import *
+from specgeometry import rectangle
 
 
-class Cylinder:
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
+class Cylinder(rectangle.Rectangle):
+    def __init__(self, r, b):
+        self.r=r
+        super().__init__(self, b)
 
-    def figure(self):
-        return pi*self.a**2*self.b
+    def info(self):
+        print(f'Радиус цилиндра: {self.r}\n'
+              f'Высота цилиндра: {self.b}')
 
-    def info_figure(self):
-        return f'Цилиндр:' \
-               f'Радиус основания: '

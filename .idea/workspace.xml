@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0032afe7-8e08-4603-85cf-e8b2434a7e8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ34 Glubokov NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ34 Glubokov NN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DZ for GitHub/specgeometry/cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/specgeometry/cylinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DZ for GitHub/specgeometry/rectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/specgeometry/rectangle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zapisi na zanyatii.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zapisi na zanyatii.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +55,8 @@
       <recent name="C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\geometry" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Zapisi na zanyatii">
-    <configuration name="DZ33 Glubokov NN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.DZ34 Glubokov NN">
+    <configuration name="DZ34 Glubokov NN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -65,7 +68,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DZ for GitHub/DZ33 Glubokov NN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DZ for GitHub/DZ34 Glubokov NN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DZ34 Glubokov NN" />
         <item itemvalue="Python.Zapisi na zanyatii" />
         <item itemvalue="Python.electrocar" />
         <item itemvalue="Python.rect (1)" />
         <item itemvalue="Python.rect" />
-        <item itemvalue="Python.DZ33 Glubokov NN" />
       </list>
     </recent_temporary>
   </component>
@@ -210,16 +213,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Zapisi na zanyatii.py</url>
-          <line>3178</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
