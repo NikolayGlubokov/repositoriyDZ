@@ -9,4 +9,9 @@ class Circle:
         print(f'Радиус круга: {self.r}')
 
     def area(self):
-        return pi*self.r**2
+        return round(pi*self.r**2,2)
+
+    def perimeter(self):
+        return round(2*pi*self.r,2)
+
+
