@@ -1181,8 +1181,7 @@
 #     for line in fr:
 #         line=line.replace('Строка', 'Линия - ')
 #         fw.write(line)
-
-
+import csv
 import os
 # print('Текущая директория: ', os.getcwd())
 # print(os.listdir('.idea'))
@@ -2798,43 +2797,43 @@ from abc import ABC, abstractmethod
 # d.sleep()
 # d.play()
 # d.bark()
+#
+# class A:
+#     # def __init__(self):
+#     #     print('Инициализатор класса А')
+#     def hi(self):
+#         print('A')
+#
+# class AA:
+#     def hi(self):
+#         print('AA')
+#
+# class B(A):
+#     # def __init__(self):
+#     #     print('Инициализатор класса B')
+#     def hi(self):
+#         print('B')
+#
+#
+# class C(AA):
+#     # def __init__(self):
+#     #     print('Инициализатор класса C')
+#     def hi(self):
+#         print('C')
+#
+#
+# class D(B, C):
+#     def __init__(self):
+#         B.__init__(self)
+#         print('Инициализатор класса D')
+#         C.__init__(self)
+#     def call_hi(self):
+#         C.hi(self)
 
-class A:
-    # def __init__(self):
-    #     print('Инициализатор класса А')
-    def hi(self):
-        print('A')
-
-class AA:
-    def hi(self):
-        print('AA')
-
-class B(A):
-    # def __init__(self):
-    #     print('Инициализатор класса B')
-    def hi(self):
-        print('B')
-
-
-class C(AA):
-    # def __init__(self):
-    #     print('Инициализатор класса C')
-    def hi(self):
-        print('C')
-
-
-class D(B, C):
-    def __init__(self):
-        B.__init__(self)
-        print('Инициализатор класса D')
-        C.__init__(self)
-    def call_hi(self):
-        C.hi(self)
-
-
-d = D()
-d.call_hi()
-print(D.mro())
+#
+# d = D()
+# d.call_hi()
+# print(D.mro())
 
 #
 # class Point:
@@ -3939,7 +3938,6 @@ import pickle
 
 import json
 
-
 # data = {
 #   'firstName': 'Jane',
 #   "lastName": "Doe",
@@ -4134,3 +4132,172 @@ import json
 # Group.dump_group('group.json', my_group2)
 # Group.dump_group('group.json', my_group)
 # Group.upload_group("group.json")
+
+# import requests
+# import json
+#
+# response = requests.get("https://jsonplaceholder.typicode.com/todos")
+# todos = json.loads(response.text)
+#
+# # print(todos[:10])
+# todos_by_user = {}
+#
+# for todo in todos:
+#     if todo['completed']:
+#         try:
+#             todos_by_user[todo['userId']] += 1
+#         except KeyError:
+#             todos_by_user[todo['userId']] = 1
+#
+# print(todos_by_user)
+#
+# top_users = sorted(todos_by_user.items(), key=lambda x: x[1], reverse=True)
+# print(top_users)
+#
+# max_completed = top_users[0][1]
+# print(max_completed)
+#
+# users = []
+# for user, num_complete in top_users:
+#     if num_complete < max_completed:
+#         break
+#     users.append(str(user))
+#
+# print(users)
+#
+# max_users = " and ".join(users)
+#
+# s = 's' if len(users) > 1 else ''
+# print(f"user{s} {max_users} completed {max_completed} TODOs")
+#
+#
+# def keep(todo):
+#     is_complete = todo['completed']
+#     has_max_count = str(todo['userId']) in users
+#     return is_complete and has_max_count
+#
+#
+# with open('filtered_data_file.json', 'w') as data_file:
+#     filter_todos = list(filter(keep, todos))
+#
+#     json.dump(filter_todos, data_file, indent=2)
+#
+# with open("filtered_data_file.json", 'r') as fw:
+#     data = json.load(fw)
+#     print(data)
+# Имя;Профессия;Год рождения
+# Виктор;Вэб-дизайнер;1995
+# Игорь;Программист;1983
+
+# CSV (Comma Separated Values)
+import csv
+
+with open('database.csv') as r_file:
+    file_reader = csv.reader(r_file, delimiter=",")
+    count = 0
+
+    for row in file_reader:
+        if count == 0:
+            print(f"Файл содержит столбцы: {', '.join(row)}")
+        else:
+            print(f"\t{row[0]} - {row[1]}. Родился в {row[2]} году.")
+        count += 1
+    print(f"Всего в файле {count} строки.")
+
+
+with open('database.csv') as r_file:
+    fieldnames = ['Имя', 'Профессия', 'Год рождения']
+    file_reader = csv.DictReader(r_file, delimiter=",", fieldnames=fieldnames)
+    count = 0
+
+    for row in file_reader:
+        if count == 0:
+            print(f"Файл содержит столбцы: {', '.join(row)}")
+        print(f"\t{row['Имя']} - {row['Профессия']}. Родился в {row['Год рождения']} году.")
+        count += 1
+    print(f"Всего в файле {count} строки.")
+
+
+# with open('student.csv', mode='w') as f:
+#     writer = csv.writer(f, delimiter=",", lineterminator="\r")
+#     writer.writerow(["Имя", "Класс", "Возраст"])
+#     writer.writerow(['Женя', '9', '15'])
+#     writer.writerow(['Саша', '5', '12'])
+#     writer.writerow(['Маша', '11', '18'])
+
+
+# data = [['hostname', 'vendor', 'model', 'location'],
+#         ['sw1', 'Cisco', '3750', 'London, Best str'],
+#         ['sw2', 'Cisco', '3850', 'Liverpool, Better str'],
+#         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
+#         ['sw4', 'Cisco', '3650', 'London, Best str']]
+#
+# with open('sw_data_new.csv', 'w') as f:
+#     writer = csv.writer(f, lineterminator="\r", quoting=csv.QUOTE_NONNUMERIC)
+#     for row in data:
+#         writer.writerow(row)
+#
+# with open('sw_data_new.csv') as f:
+#     print(f.read())
+
+
+# data = [['hostname', 'vendor', 'model', 'location'],
+#         ['sw1', 'Cisco', '3750', 'London, Best str'],
+#         ['sw2', 'Cisco', '3850', 'Liverpool, Better str'],
+#         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
+#         ['sw4', 'Cisco', '3650', 'London, Best str']]
+#
+# with open('sw_data_new1.csv', 'w') as f:
+#     writer = csv.writer(f, lineterminator="\r", quoting=csv.QUOTE_NONNUMERIC)
+#     writer.writerows(data)
+#
+# with open('sw_data_new1.csv') as f:
+#     print(f.read())
+
+# with open("student1.csv", 'w') as f:
+#     names = ['Имя', 'Возраст']
+#     file_writer = csv.DictWriter(f, delimiter=",", lineterminator="\r", fieldnames=names)
+#     file_writer.writeheader()
+#     file_writer.writerow({'Имя': 'Саша', 'Возраст': '6'})
+#     file_writer.writerow({'Имя': 'Маша', 'Возраст': '15'})
+#     file_writer.writerow({'Имя': 'Вова', 'Возраст': '14'})
+
+
+# data = [{
+#     'hostname': 'sw1',
+#     'location': 'London',
+#     'model': '3750',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw2',
+#     'location': 'Liverpool',
+#     'model': '3850',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw3',
+#     'location': 'Liverpool',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw4',
+#     'location': 'London',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }]
+#
+# with open('dictwriter.csv', 'w') as f:
+#     write = csv.DictWriter(f, fieldnames=list(data[0].keys()), lineterminator="\r")
+#     write.writeheader()
+#     for d in data:
+#         write.writerow(d)
+
+# from bs4 import BeautifulSoup
+#
+# f = open('index.html').read()
+# soup = BeautifulSoup(f, 'html.parser')
+# # row = soup.find("div", class_="name").text
+# # row = soup.find_all("div", class_="name")
+# # row = soup.find_all("div", class_="row")[1].find('div', class_='links')
+# row = soup.find_all("div", {"class": "name"})
+# print(row)
+#
