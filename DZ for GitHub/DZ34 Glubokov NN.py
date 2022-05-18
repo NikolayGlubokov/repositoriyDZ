@@ -16,7 +16,7 @@ def homework34():
         circle_lst.append(i)
 
     for i in circle_lst:
-        print(f'Длина окружности: {i.perimeter()}')
+        print(f'Длина окружности: {i.perimeter_circle()}')
 
     for i in circle_lst:
         print(f'Площадь круга равна: {i.area()}')
@@ -29,9 +29,9 @@ def homework34():
         print(f'Периметр прямоугольника: {i.perimeter()}')
 
     for i in range(m):
-        i = cylinder.Cylinder(randint(0,20),randint(0,20))
+        i = cylinder.Cylinder(randint(0,20),randint(0,20), randint(0,20))
         cylinder_lst.append(i)
-
+    print(cylinder_lst)
     for i in cylinder_lst:
         print(f'Площадь круга равна: {i.area_circle()}')
         print(f'Объём цилиндра равен: {i.value()}')

@@ -2485,6 +2485,7 @@ import os.path
 # t3 = RoundTable(radius=20)
 # print(t3.__dict__)
 # print(t3.calc_area())
+import re
 from abc import ABC, abstractmethod
 
 # class Chess(ABC):
@@ -4291,15 +4292,150 @@ import csv
 #     for d in data:
 #         write.writerow(d)
 
+# from bs4 import BeautifulSoup
+#
+
+# def get_salary(s):
+#     pattern=r'\d+'
+#     res=re.findall(pattern,s)[0]
+#     print(res)
+# # def get_copywriter(tag):
+# #     whois=tag.find('div', class_='whois')
+# #     if 'Copywriter' in whois:
+# #         return tag
+# #     return None
+
+
+# f = open('index.html', encoding='utf-8').read()
+# soup = BeautifulSoup(f, 'html.parser')
+# # row = soup.find("div", class_="name").text
+# # row = soup.find_all("div", class_="name")
+# # row = soup.find_all("div", class_="row")[1].find('div', class_='links')
+# # row = soup.find_all("div", {"data-set": "salary"})
+# # row = soup.find_all("div", text='Alena')
+# # row = soup.find("div", text='Alena').parent
+# # row = soup.find("div", text='Alena').find_parent(class_='row')
+# # row=soup.find('div', id='whois3').find_next_sibling()
+# # row=soup.find('div', id='whois3').find_previous_sibling()
+# print(row)
+# copywriter=[]
+# row = soup.find_all('div', class_='row')
+# print(row)
+# for i in row:
+#     cw = get_copywriter(i)
+#     if cw:
+#         copywriter.append(cw)
+#
+# print(copywriter)
+# salary=soup.find_all('div', {'data-set':'salary'})
+# # print(salary)
+# for i in salary:
+#     get_salary(i.text)
+import requests
 from bs4 import BeautifulSoup
 
-f = open('index.html').read()
-soup = BeautifulSoup(f, 'html.parser')
-# row = soup.find("div", class_="name").text
-# row = soup.find_all("div", class_="name")
-# row = soup.find_all("div", class_="row")[1].find('div', class_='links')
-row = soup.find_all("div", {"class": "name"})
-row2=soup.find_all('div')
-print(row)
-print(row2)
+
 #
+# def get_html(url):
+#     r = requests.get(url)
+#     return r.text
+#
+# def refined(s):
+#     res=re.sub(r'\D+','',s)
+#     return res
+#
+#
+# def write_csv(data):
+#     with open('plugins.csv', 'a') as f:
+#         writer=csv.writer(f, lineterminator='\r')
+#         writer.writerow((data['name'], data['url'], data['rating']))
+# def get_data(html):
+#     soup = BeautifulSoup(html, 'lxml')
+#     # p1=soup.find('header', id='masthead').find('p', class_='site-title').text
+#     s = soup.find_all('section', class_='plugin-section')[1]
+#     plugins = s.find_all('article')
+#     # return len(plugins)
+#     for plugin in plugins:
+#         name=plugin.find('h3').text
+#         url=plugin.find('h3').find('a').get('href')
+#         rating=plugin.find('span', class_='rating-count').find('a').text
+#         r=refined(rating)
+#
+#         data = {'name':name, 'url':url, 'rating':rating}
+#         print(data)
+#         write_csv(data)
+#
+# def main():
+#     urs = 'https://ru.wordpress.org/plugins/'
+#     get_data(get_html(urs))
+#
+#
+# # r = requests.get('https://ru.wordpress.org/')
+# # print(r.status_code)
+# # print(r.headers['Content-Type'])
+# # r.encoding='utf-8'
+# # print(r.text)
+# if __name__ == '__main__':
+#     main()
+
+
+def get_html(url):
+    r = requests.get(url)
+    return r.text
+
+
+def main():
+    for i in range(8,11):
+        urs = f'https://ru.wordpress.org/plugins/browse/blocks/page/{i}/'
+        get_page_data(get_html(urs))
+
+
+def refined_cy(s):
+    return s.split()[-1]
+
+def write_csv(data):
+    with open('plugins2.csv', 'a') as f:
+        writer=csv.writer(f, lineterminator='\r', delimiter=';')
+        writer.writerow((data['name'], data['url'], data['snippet'], data['active'], data['cy']))
+
+
+def get_page_data(html):
+    soup = BeautifulSoup(html, 'lxml')
+    elements = soup.find_all('article', class_='plugin-card')
+    for el in elements:
+        try:
+            name = el.find('h3').text
+        except ValueError:
+            name = ''
+
+        try:
+            url = el.find('h3').find('a').get('href')
+        except ValueError:
+            url = ''
+
+        try:
+            snippet = el.find('div', class_='entry-excerpt').text.strip()
+        except ValueError:
+            snippet = ''
+
+        try:
+            active = el.find('span', class_='active-installs').text.strip()
+        except ValueError:
+            active = ''
+
+        try:
+            c = el.find('span', class_='tested-with').text.strip()
+            cy = refined_cy(c)
+        except ValueError:
+            c = ''
+        data = {
+            'name': name,
+            'url': url,
+            'snippet': snippet,
+            'active': active,
+            'cy': cy
+        }
+        write_csv(data)
+
+if __name__ == '__main__':
+    main()

@@ -1,11 +1,11 @@
 from math import *
-from specgeometry import rectangle
+from specgeometry import rectangle, circle
 
 
-class Cylinder(rectangle.Rectangle):
-    def __init__(self, r, b):
-        self.r=r
-        super().__init__(self, b)
+class Cylinder(rectangle.Rectangle, circle.Circle):
+    def __init__(self, a, r, b):
+        rectangle.Rectangle.__init__(self, a, b)
+        circle.Circle.__init__(self, r)
 
     def info(self):
         print(f'Радиус цилиндра: {self.r}\n'
