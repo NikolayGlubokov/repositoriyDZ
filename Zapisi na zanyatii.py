@@ -4191,31 +4191,31 @@ import json
 
 # CSV (Comma Separated Values)
 import csv
-
-with open('database.csv') as r_file:
-    file_reader = csv.reader(r_file, delimiter=",")
-    count = 0
-
-    for row in file_reader:
-        if count == 0:
-            print(f"Файл содержит столбцы: {', '.join(row)}")
-        else:
-            print(f"\t{row[0]} - {row[1]}. Родился в {row[2]} году.")
-        count += 1
-    print(f"Всего в файле {count} строки.")
-
-
-with open('database.csv') as r_file:
-    fieldnames = ['Имя', 'Профессия', 'Год рождения']
-    file_reader = csv.DictReader(r_file, delimiter=",", fieldnames=fieldnames)
-    count = 0
-
-    for row in file_reader:
-        if count == 0:
-            print(f"Файл содержит столбцы: {', '.join(row)}")
-        print(f"\t{row['Имя']} - {row['Профессия']}. Родился в {row['Год рождения']} году.")
-        count += 1
-    print(f"Всего в файле {count} строки.")
+#
+# with open('database.csv') as r_file:
+#     file_reader = csv.reader(r_file, delimiter=",")
+#     count = 0
+#
+#     for row in file_reader:
+#         if count == 0:
+#             print(f"Файл содержит столбцы: {', '.join(row)}")
+#         else:
+#             print(f"\t{row[0]} - {row[1]}. Родился в {row[2]} году.")
+#         count += 1
+#     print(f"Всего в файле {count} строки.")
+#
+#
+# with open('database.csv') as r_file:
+#     fieldnames = ['Имя', 'Профессия', 'Год рождения']
+#     file_reader = csv.DictReader(r_file, delimiter=",", fieldnames=fieldnames)
+#     count = 0
+#
+#     for row in file_reader:
+#         if count == 0:
+#             print(f"Файл содержит столбцы: {', '.join(row)}")
+#         print(f"\t{row['Имя']} - {row['Профессия']}. Родился в {row['Год рождения']} году.")
+#         count += 1
+#     print(f"Всего в файле {count} строки.")
 
 
 # with open('student.csv', mode='w') as f:
@@ -4291,13 +4291,15 @@ with open('database.csv') as r_file:
 #     for d in data:
 #         write.writerow(d)
 
-# from bs4 import BeautifulSoup
-#
-# f = open('index.html').read()
-# soup = BeautifulSoup(f, 'html.parser')
-# # row = soup.find("div", class_="name").text
-# # row = soup.find_all("div", class_="name")
-# # row = soup.find_all("div", class_="row")[1].find('div', class_='links')
-# row = soup.find_all("div", {"class": "name"})
-# print(row)
+from bs4 import BeautifulSoup
+
+f = open('index.html').read()
+soup = BeautifulSoup(f, 'html.parser')
+# row = soup.find("div", class_="name").text
+# row = soup.find_all("div", class_="name")
+# row = soup.find_all("div", class_="row")[1].find('div', class_='links')
+row = soup.find_all("div", {"class": "name"})
+row2=soup.find_all('div')
+print(row)
+print(row2)
 #
