@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="55aa9e9e-22b2-4096-8529-e603b6479348" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ34 Glubokov NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ34 Glubokov NN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/specgeometry/circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/specgeometry/circle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/specgeometry/cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/specgeometry/cylinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/specgeometry/rectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/specgeometry/rectangle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zapisi na zanyatii.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zapisi na zanyatii.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/plugins2.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.DZ34 Glubokov NN (1)">
+  <component name="RunManager" selected="Python.DZ37 Glubokov NN parsing">
     <configuration name="DZ34 Glubokov NN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +110,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="DZ37 Glubokov NN parsing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DZ1 Glubokov NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DZ for GitHub" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DZ for GitHub/DZ37 Glubokov NN parsing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Zapisi na zanyatii" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,9 +154,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DZ37 Glubokov NN parsing" />
+        <item itemvalue="Python.Zapisi na zanyatii" />
         <item itemvalue="Python.DZ34 Glubokov NN (1)" />
         <item itemvalue="Python.DZ34 Glubokov NN" />
-        <item itemvalue="Python.Zapisi na zanyatii" />
         <item itemvalue="Python.DZ36 Glubokov NN" />
       </list>
     </recent_temporary>

@@ -4385,7 +4385,7 @@ def get_html(url):
 
 
 def main():
-    for i in range(8,11):
+    for i in range(1,4):
         urs = f'https://ru.wordpress.org/plugins/browse/blocks/page/{i}/'
         get_page_data(get_html(urs))
 
@@ -4402,6 +4402,7 @@ def write_csv(data):
 def get_page_data(html):
     soup = BeautifulSoup(html, 'lxml')
     elements = soup.find_all('article', class_='plugin-card')
+    print(elements)
     for el in elements:
         try:
             name = el.find('h3').text
