@@ -1,8 +1,9 @@
-from base import Base
+from controller import Controller
+
 
 def main():
-    base=Base()
-    base.work()
+    app=Controller()
+    app.run()
 
 if __name__=='__main__':
     main()
