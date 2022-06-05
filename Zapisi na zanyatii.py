@@ -4546,9 +4546,9 @@ import sqlite3 as sq
 # ''')
 # con.close()
 
-with sq.connect('profile.db') as con:
-    cur = con.cursor()
-    cur. execute('''DROP TABLE users''')
+# with sq.connect('profile.db') as con:
+#     cur = con.cursor()
+#     cur. execute('''DROP TABLE users''')
     # cur.execute('''CREATE TABLE IF NOT EXISTS users(
     # id INTEGER PRIMARY KEY AUTOINCREMENT,
     # name TEXT NOT NULL,
@@ -4559,3 +4559,45 @@ with sq.connect('profile.db') as con:
 # name - text
 # sum - real
 # date blob CRE
+#GLOB
+# * - любое кол-во символов
+# ? - один знак
+# . - один любой символ
+#[фис] - один из заданных символов
+#[0-9a-zA-Z] - заданный диапазон
+#[^abc] - любой, кроме заданных
+# IN (NOT IN) (Nabor znacheniy)
+with sq.connect('user.db') as con:
+    cur = con.cursor()
+    # cur.execute("""
+    # ALTER TABLE person_table
+    # ADD COLUMN address;
+    # """)
+    # cur.execute("""
+    #     ALTER TABLE person_table
+    #     RENAME COLUMN address TO home_address;
+    #
+    #     """)
+    # cur.execute("""CREATE TABLE IF NOT EXISTS person(
+    # id INTEGER PRIMARY KEY AUTOINCREMENT,
+    # name TEXT NOT NULL,
+    # phone BLOB NOT NULL DEFAULT +79090000000,
+    # age INTEGER NOT NULL CHECK(age >0 AND age<100),
+    # email TEXT UNIQUE
+    # )""")
+    # cur.execute("""
+    # ALTER TABLE person
+    # RENAME TO person_table;
+    #
+    # """)
+
+
+with sq.connect('db_4.db') as con:
+    cur = con.cursor()
+    cur.execute("""
+        SELECT *
+        FROM Ware
+        Order BY Price DESC
+        LIMIT  2, 5; """)
+    res=cur.fetchone()
+    print(res)
