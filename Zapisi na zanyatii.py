@@ -13,29 +13,29 @@
 #         if not even and cur_digit % 2 != 0:
 #             sum += cur_digit
 #         n //= 10
-# 
+#
 #     return sum
-# 
-# 
+#
+#
 # print(check_password(754622, even=False))
-# 
-# 
+#
+#
 # def display_info(name, age):
 #     print('Name:', name, "\n Age:", age, "\n")
-# 
-# 
+#
+#
 # display_info('Ira', 23)
 # display_info(age=23, name='Ira')
 # display_info('Igor', 23)
-# 
-# 
+#
+#
 # def func(a, ln=None):
 #     if ln is None:
 #         ln = []
 #     ln.append(a)
 #     return ln
-# 
-# 
+#
+#
 # print(func(1))
 # print(func(1))
 # print(func(1))
@@ -43,22 +43,22 @@
 # b = 5
 # print(id(a))
 # print(id(b))
-# 
+#
 # lt = [1, 2, 3, 4]
 # lt1 = [1, 2, 3, 4]
 # print(id(lt))
 # print(id(lt1))
 # print(lt == lt1)
 # print(lt is lt1)
-# 
-# 
+#
+#
 # def add_number(n):
 #     print('Vnutri funkcii: ', n, '=', id(n))
 #     n += 1
 #     print('Posle prisvoeniya:', n, '=', id(n))
 #     return n
-# 
-# 
+#
+#
 # x = 1
 # print(x, '=', id(x))
 #
@@ -399,29 +399,29 @@
 # # print(typed_fn2("Hello, ", "world", "!"))
 # # print(typed_fn2("Hello, ", "world", 2))
 # print(typed_fn3("Hello, ", "world!  ", z=5))
-# 
+#
 # def decor(tx=None, dec_text=""):
 #     def wrapper(func):
 #         def wrap(*args):
 #             print(dec_text, end="")
 #             func(*args)
-# 
+#
 #         return wrap
-# 
+#
 #     if tx is None:
 #         return wrapper
 #     else:
 #         return wrapper(tx)
-# 
-# 
+#
+#
 # @decor
 # def hello_world2(text):
 #     print(text)
-# 
-# 
+#
+#
 # hello_world2("Hi!")
-# 
-# 
+#
+#
 # @decor(dec_text="Hello, ")
 # def hello_world(text):
 #     print(text)
@@ -3902,7 +3902,7 @@ import pickle
 #         self.filename = filename
 #         self.file = open(filename)
 #         self.count = 0
-# 
+#
 #     def read_line(self):
 #         self.count += 1
 #         line = self.file.readline()
@@ -3910,9 +3910,9 @@ import pickle
 #             return None
 #         if line.endswith('\n'):
 #             line = line[:-1]
-# 
+#
 #         return f'{self.count}:{line}'
-# 
+#
 #     def __getstate__(self):
 #         state = self.__dict__.copy()
 #         del state['file']
@@ -3922,14 +3922,14 @@ import pickle
 #         self.file = open(self.filename)
 #         for i in range(self.count):
 #             file.readline()
-# 
+#
 #         self.file = file
-# 
-# 
+#
+#
 # reader = TextReader('dream.txt')
 # print(reader.read_line())
 # print(reader.read_line())
-# 
+#
 # new_reader = pickle.loads(pickle.dumps(reader))
 # print(new_reader.read_line())
 
@@ -4538,6 +4538,8 @@ from bs4 import BeautifulSoup
 #     run()
 #
 import sqlite3 as sq
+
+
 #
 # con = sq.connect('profile.db')
 # cur = con.cursor()
@@ -4549,55 +4551,185 @@ import sqlite3 as sq
 # with sq.connect('profile.db') as con:
 #     cur = con.cursor()
 #     cur. execute('''DROP TABLE users''')
-    # cur.execute('''CREATE TABLE IF NOT EXISTS users(
-    # id INTEGER PRIMARY KEY AUTOINCREMENT,
-    # name TEXT NOT NULL,
-    # sum REAL,
-    # date TEXT
-    # )''')
+# cur.execute('''CREATE TABLE IF NOT EXISTS users(
+# id INTEGER PRIMARY KEY AUTOINCREMENT,
+# name TEXT NOT NULL,
+# sum REAL,
+# date TEXT
+# )''')
 # id - integer - первичный ключ(уникальное значение)
 # name - text
 # sum - real
 # date blob CRE
-#GLOB
+# GLOB
 # * - любое кол-во символов
 # ? - один знак
 # . - один любой символ
-#[фис] - один из заданных символов
-#[0-9a-zA-Z] - заданный диапазон
-#[^abc] - любой, кроме заданных
+# [фис] - один из заданных символов
+# [0-9a-zA-Z] - заданный диапазон
+# [^abc] - любой, кроме заданных
 # IN (NOT IN) (Nabor znacheniy)
-with sq.connect('user.db') as con:
-    cur = con.cursor()
-    # cur.execute("""
-    # ALTER TABLE person_table
-    # ADD COLUMN address;
-    # """)
-    # cur.execute("""
-    #     ALTER TABLE person_table
-    #     RENAME COLUMN address TO home_address;
-    #
-    #     """)
-    # cur.execute("""CREATE TABLE IF NOT EXISTS person(
-    # id INTEGER PRIMARY KEY AUTOINCREMENT,
-    # name TEXT NOT NULL,
-    # phone BLOB NOT NULL DEFAULT +79090000000,
-    # age INTEGER NOT NULL CHECK(age >0 AND age<100),
-    # email TEXT UNIQUE
-    # )""")
-    # cur.execute("""
-    # ALTER TABLE person
-    # RENAME TO person_table;
-    #
-    # """)
+# with sq.connect('user.db') as con:
+#     cur = con.cursor()
+# cur.execute("""
+# ALTER TABLE person_table
+# ADD COLUMN address;
+# """)
+# cur.execute("""
+#     ALTER TABLE person_table
+#     RENAME COLUMN address TO home_address;
+#
+#     """)
+# cur.execute("""CREATE TABLE IF NOT EXISTS person(
+# id INTEGER PRIMARY KEY AUTOINCREMENT,
+# name TEXT NOT NULL,
+# phone BLOB NOT NULL DEFAULT +79090000000,
+# age INTEGER NOT NULL CHECK(age >0 AND age<100),
+# email TEXT UNIQUE
+# )""")
+# cur.execute("""
+# ALTER TABLE person
+# RENAME TO person_table;
+#
+# """)
+
+# #
+# # with sq.connect('db_4.db') as con:
+# #     cur = con.cursor()
+# #     cur.execute("""
+# #         SELECT *
+# #         FROM Ware
+# #         Order BY Price DESC
+# #         LIMIT  2, 5; """)
+# #     res=cur.fetchone()
+# #     print(res)
+# cars = [
+#     ('Volkswagen', 30000),
+# ('Nissan', 30000),
+# ('Mazda', 27000),
+# ('Toyota', 33000),
+# ('Ford', 35000),
+# ]
+#
+#
+# def read_ava(n):
+#     try:
+#         with open(f'avatars/{n}.png', 'rb') as f:
+#             return f.read()
+#     except IOError as e:
+#         print(e)
+#         return False
+#
+#
+# def write_ava(name, data):
+#     try:
+#         with open(name, 'wb') as f:
+#             f.write(data)
+#     except IOError as e:
+#         print(e)
+#         return False
+#     return True
+#
+#
+#
+# with sq.connect('cars.db') as con:
+#     con.row_factory = sq.Row
+#     cur = con.cursor()
+#     cur.executescript("""
+#     CREATE TABLE IF NOT EXISTs users(
+#     name TEXT,
+#     ava BLOB,
+#     score INTEGER
+#     );
+#
+#     """)
+#
+#     cur.execute("SELECT ava FROM users LIMIT 1")
+#     img = cur.fetchone()['ava']
+#
+#
+#     write_ava('out.png', img)
+    # img = read_ava(1)
+    # if img:
+    #     binary=sq.Binary(img)
+    #     cur.execute("INSERT INTO users VALUES('Илья',?,1000)", (binary,))
+#     cur.execute("SELECT model, price FROM cars")
+#     # print(con.row_factory)
+#     # rows=cur.fetchall()
+#     # rows=cur.fetchmany(5)
+#     # print(rows)
+#     for res in cur:
+#         print(res['model'],':', res['price'])
+#     # cur.execute("INSERT INTO cars VALUES(NULL, 'Запорожец', 1000)")
+#     # last_row_id = cur.lastrowid#id последней записи
+#     # but_car_id = 2 #простая переменная авто, который покупатель купит
+#     # cur.execute("INSERT INTO cost VALUES('Илья', ?,?)",(last_row_id,but_car_id))
+# #     #
+# #     # cur.executescript("""
+# #     # DELETE FROM cars WHERE model LIKE 'F%';
+# #     # UPDATE cars SET price=price+100;
+# #     #
+# #     # """)
+# #
+# #     cur.execute("UPDATE cars SET price=:Price WHERE model LIKE 'B%'", {'Price':0})
+#     # cur.executemany("INSERT INTO cars VALUES(NULL,?,?)", cars)
+#     # for car in cars:
+#     #     cur.execute("INSERT INTO cars VALUES(NULL,?,?)", car)
+#     # cur.execute("INSERT INTO cars VALUES(1,'Renault', 22000)")
+#     # cur.execute("INSERT INTO cars VALUES(2,'Volvo', 40000)")
+#     # cur.execute("INSERT INTO cars VALUES(3,'Mercedes', 45000)")
+#     # cur.execute("INSERT INTO cars VALUES(4,'BMW', 43000)")
+#     # cur.execute("INSERT INTO cars VALUES(5,'AUDI', 44000)")
+#
+#
+#
+#     # con.comit()
+#     #
+# # # con.close()
+# # con=None
+# #
+# # try:
+# #     con=sq.connect('cars.db')
+# #     cur=con.cursor()
+# #     cur.executescript("""
+# #     CREATE TABLE IF NOT EXISTs cars(
+# #     car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+# #     model TEXT,
+# #     price INTEGER);
+# #     BEGIN;
+# #     INSERT INTO cars VALUES(NULL, 'Seat',22000);
+# #     UPDATE cars2 SET price=price+100;
+# #
+# # """)
+# #     con.commit()
+# # except sq.Error as e:
+# #     if con:
+# #         con.rollback()
+# #     print('Ошибка выполнения запроса')
+# # finally:
+# #     if con:
+# #         con.close()
+
+# with sq.connect('cars.db') as con:
+#
+#     cur = con.cursor()
+#     with open(s)
+#     for sql in con.iterdump():
+#         print(sql)]
+
+# data = [('car', 'машина'),('house', 'дом'),('tree','дерево'),('color','цвет')]
+# con = sq.connect(':memory:')
+# with con:
+#     cur=con.cursor()
+#     cur.execute("""
+#     CREATE TABLE IF NOT EXISTS dict(
+#     eng TEXT,
+#     rus TEXT)
+#     """)
+#
+#     cur.executemany("INSERT INTO dict VALUES(?,?)", data)
+#
+#     cur.execute("SELECT rus FROM  dict WHERE eng LIKE 'c%'")
+#     print(cur.fetchall())
 
 
-with sq.connect('db_4.db') as con:
-    cur = con.cursor()
-    cur.execute("""
-        SELECT *
-        FROM Ware
-        Order BY Price DESC
-        LIMIT  2, 5; """)
-    res=cur.fetchone()
-    print(res)
