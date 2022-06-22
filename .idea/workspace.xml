@@ -8,18 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55aa9e9e-22b2-4096-8529-e603b6479348" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/homework46.db" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/homework46.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask app/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask app/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask app/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.db" beforeDir="false" afterPath="$PROJECT_DIR$/students.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
