@@ -8,7 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55aa9e9e-22b2-4096-8529-e603b6479348" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DZ for GitHub/DZ46 Glubokov NN/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/FDataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/FDataBase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/flsk.db" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/flsk.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/page404.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/page404.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,29 +66,13 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\DZ for GitHub\Homework SQL" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\flask_app\templates" />
+      <recent name="C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\flask_app\templates\static\css" />
+      <recent name="C:\Users\Николай\Desktop\домашние задания\DZ1 Glubokov NN\flask_app\templates\static" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="example (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DZ1 Glubokov NN" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DZ for GitHub/DZ45 Glubokov NN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DZ for GitHub/DZ45 Glubokov NN/example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main (3)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,27 +94,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DZ1 Glubokov NN" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DZ1 Glubokov NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,6 +107,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DZ1 Glubokov NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DZ for GitHub/DZ48 Glubokov NN" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DZ for GitHub/DZ48 Glubokov NN/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (5)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DZ1 Glubokov NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_app 2 level" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_app 2 level/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (3)" />
+        <item itemvalue="Python.main (5)" />
+        <item itemvalue="Python.main (4)" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.main (3)" />
-        <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.example (1)" />
       </list>
     </recent_temporary>
   </component>
